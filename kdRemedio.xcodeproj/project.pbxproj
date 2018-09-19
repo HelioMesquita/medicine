@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		499549C559645DE6423EFC00 /* Pods_kdRemedio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEACB8193103DB5B612126A2 /* Pods_kdRemedio.framework */; };
+		49A307ECB51F3293BA070D15 /* Pods_kdRemedioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14780CE477068A73B05CDA88 /* Pods_kdRemedioTests.framework */; };
+		FDAB6186214B2FD300A1C01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB6185214B2FD300A1C01A /* AppDelegate.swift */; };
+		FDAB6188214B2FD300A1C01A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB6187214B2FD300A1C01A /* MapViewController.swift */; };
+		FDAB618B214B2FD300A1C01A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAB6189214B2FD300A1C01A /* Main.storyboard */; };
+		FDAB618D214B2FD500A1C01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAB618C214B2FD500A1C01A /* Assets.xcassets */; };
+		FDAB6190214B2FD500A1C01A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAB618E214B2FD500A1C01A /* LaunchScreen.storyboard */; };
+		FDAB619B214B2FD500A1C01A /* kdRemedioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB619A214B2FD500A1C01A /* kdRemedioTests.swift */; };
+		FDAB61A6214B313400A1C01A /* MedicineFinderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61A5214B313400A1C01A /* MedicineFinderTableViewController.swift */; };
+		FDAB61A8214B32AA00A1C01A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAB61A7214B32AA00A1C01A /* Colors.xcassets */; };
+		FDAB61AA214B3A4F00A1C01A /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61A9214B3A4F00A1C01A /* json.swift */; };
+		FDAB61B2214B3AA200A1C01A /* Ubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AC214B3AA100A1C01A /* Ubs.swift */; };
+		FDAB61B3214B3AA200A1C01A /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AD214B3AA100A1C01A /* Coordinate.swift */; };
+		FDAB61B4214B3AA200A1C01A /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AE214B3AA100A1C01A /* Medicine.swift */; };
+		FDAB61B5214B3AA200A1C01A /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AF214B3AA200A1C01A /* Links.swift */; };
+		FDAB61B6214B3AA200A1C01A /* UbsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B0214B3AA200A1C01A /* UbsList.swift */; };
+		FDAB61B7214B3AA200A1C01A /* Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B1214B3AA200A1C01A /* Safe.swift */; };
+		FDAB61B9214B444100A1C01A /* UbsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B8214B444100A1C01A /* UbsManager.swift */; };
+		FDAB61BB214B45B700A1C01A /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */; };
+		FDAB61BD214EB94800A1C01A /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDAB6197214B2FD500A1C01A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDAB617A214B2FD300A1C01A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDAB6181214B2FD300A1C01A;
+			remoteInfo = kdRemedio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14780CE477068A73B05CDA88 /* Pods_kdRemedioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kdRemedioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48A2440723709B8C6BD223C4 /* Pods-kdRemedio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio.debug.xcconfig"; sourceTree = "<group>"; };
+		9CAC3FB165A4EAC1B8607462 /* Pods-kdRemedio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedio.release.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio.release.xcconfig"; sourceTree = "<group>"; };
+		C85F6929BB780B68065451DE /* Pods-kdRemedioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedioTests/Pods-kdRemedioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEACB8193103DB5B612126A2 /* Pods_kdRemedio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kdRemedio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E55436C662BE52D3B1679807 /* Pods-kdRemedioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedioTests/Pods-kdRemedioTests.release.xcconfig"; sourceTree = "<group>"; };
+		FDAB6182214B2FD300A1C01A /* kdRemedio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kdRemedio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDAB6185214B2FD300A1C01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDAB6187214B2FD300A1C01A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FDAB618A214B2FD300A1C01A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDAB618C214B2FD500A1C01A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDAB618F214B2FD500A1C01A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDAB6191214B2FD500A1C01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDAB6196214B2FD500A1C01A /* kdRemedioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kdRemedioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDAB619A214B2FD500A1C01A /* kdRemedioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kdRemedioTests.swift; sourceTree = "<group>"; };
+		FDAB619C214B2FD500A1C01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDAB61A5214B313400A1C01A /* MedicineFinderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineFinderTableViewController.swift; sourceTree = "<group>"; };
+		FDAB61A7214B32AA00A1C01A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		FDAB61A9214B3A4F00A1C01A /* json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		FDAB61AC214B3AA100A1C01A /* Ubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ubs.swift; sourceTree = "<group>"; };
+		FDAB61AD214B3AA100A1C01A /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		FDAB61AE214B3AA100A1C01A /* Medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
+		FDAB61AF214B3AA200A1C01A /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		FDAB61B0214B3AA200A1C01A /* UbsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbsList.swift; sourceTree = "<group>"; };
+		FDAB61B1214B3AA200A1C01A /* Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safe.swift; sourceTree = "<group>"; };
+		FDAB61B8214B444100A1C01A /* UbsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbsManager.swift; sourceTree = "<group>"; };
+		FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDAB617F214B2FD300A1C01A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				499549C559645DE6423EFC00 /* Pods_kdRemedio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDAB6193214B2FD500A1C01A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A307ECB51F3293BA070D15 /* Pods_kdRemedioTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4AD524B114D86E89EC6F24B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48A2440723709B8C6BD223C4 /* Pods-kdRemedio.debug.xcconfig */,
+				9CAC3FB165A4EAC1B8607462 /* Pods-kdRemedio.release.xcconfig */,
+				C85F6929BB780B68065451DE /* Pods-kdRemedioTests.debug.xcconfig */,
+				E55436C662BE52D3B1679807 /* Pods-kdRemedioTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B60DEB08C843A94D20A6DA5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEACB8193103DB5B612126A2 /* Pods_kdRemedio.framework */,
+				14780CE477068A73B05CDA88 /* Pods_kdRemedioTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDAB6179214B2FD300A1C01A = {
+			isa = PBXGroup;
+			children = (
+				FDAB6184214B2FD300A1C01A /* kdRemedio */,
+				FDAB6199214B2FD500A1C01A /* kdRemedioTests */,
+				FDAB6183214B2FD300A1C01A /* Products */,
+				4AD524B114D86E89EC6F24B8 /* Pods */,
+				B60DEB08C843A94D20A6DA5D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FDAB6183214B2FD300A1C01A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDAB6182214B2FD300A1C01A /* kdRemedio.app */,
+				FDAB6196214B2FD500A1C01A /* kdRemedioTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDAB6184214B2FD300A1C01A /* kdRemedio */ = {
+			isa = PBXGroup;
+			children = (
+				FDAB61AB214B3A9800A1C01A /* Model */,
+				FDAB6185214B2FD300A1C01A /* AppDelegate.swift */,
+				FDAB6187214B2FD300A1C01A /* MapViewController.swift */,
+				FDAB61A5214B313400A1C01A /* MedicineFinderTableViewController.swift */,
+				FDAB6189214B2FD300A1C01A /* Main.storyboard */,
+				FDAB618C214B2FD500A1C01A /* Assets.xcassets */,
+				FDAB61A7214B32AA00A1C01A /* Colors.xcassets */,
+				FDAB618E214B2FD500A1C01A /* LaunchScreen.storyboard */,
+				FDAB6191214B2FD500A1C01A /* Info.plist */,
+				FDAB61A9214B3A4F00A1C01A /* json.swift */,
+				FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */,
+				FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */,
+			);
+			path = kdRemedio;
+			sourceTree = "<group>";
+		};
+		FDAB6199214B2FD500A1C01A /* kdRemedioTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDAB619A214B2FD500A1C01A /* kdRemedioTests.swift */,
+				FDAB619C214B2FD500A1C01A /* Info.plist */,
+			);
+			path = kdRemedioTests;
+			sourceTree = "<group>";
+		};
+		FDAB61AB214B3A9800A1C01A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDAB61B0214B3AA200A1C01A /* UbsList.swift */,
+				FDAB61AC214B3AA100A1C01A /* Ubs.swift */,
+				FDAB61AD214B3AA100A1C01A /* Coordinate.swift */,
+				FDAB61AF214B3AA200A1C01A /* Links.swift */,
+				FDAB61AE214B3AA100A1C01A /* Medicine.swift */,
+				FDAB61B1214B3AA200A1C01A /* Safe.swift */,
+				FDAB61B8214B444100A1C01A /* UbsManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDAB6181214B2FD300A1C01A /* kdRemedio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDAB619F214B2FD500A1C01A /* Build configuration list for PBXNativeTarget "kdRemedio" */;
+			buildPhases = (
+				9AB137659D3A73B8F5AF6C66 /* [CP] Check Pods Manifest.lock */,
+				FDAB617E214B2FD300A1C01A /* Sources */,
+				FDAB617F214B2FD300A1C01A /* Frameworks */,
+				FDAB6180214B2FD300A1C01A /* Resources */,
+				FC51EC14006A9C668CDD23CF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kdRemedio;
+			productName = kdRemedio;
+			productReference = FDAB6182214B2FD300A1C01A /* kdRemedio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDAB6195214B2FD500A1C01A /* kdRemedioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDAB61A2214B2FD500A1C01A /* Build configuration list for PBXNativeTarget "kdRemedioTests" */;
+			buildPhases = (
+				909A8A408E264086CF61862A /* [CP] Check Pods Manifest.lock */,
+				FDAB6192214B2FD500A1C01A /* Sources */,
+				FDAB6193214B2FD500A1C01A /* Frameworks */,
+				FDAB6194214B2FD500A1C01A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDAB6198214B2FD500A1C01A /* PBXTargetDependency */,
+			);
+			name = kdRemedioTests;
+			productName = kdRemedioTests;
+			productReference = FDAB6196214B2FD500A1C01A /* kdRemedioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDAB617A214B2FD300A1C01A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = callidus;
+				TargetAttributes = {
+					FDAB6181214B2FD300A1C01A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					FDAB6195214B2FD500A1C01A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = FDAB6181214B2FD300A1C01A;
+					};
+				};
+			};
+			buildConfigurationList = FDAB617D214B2FD300A1C01A /* Build configuration list for PBXProject "kdRemedio" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDAB6179214B2FD300A1C01A;
+			productRefGroup = FDAB6183214B2FD300A1C01A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDAB6181214B2FD300A1C01A /* kdRemedio */,
+				FDAB6195214B2FD500A1C01A /* kdRemedioTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDAB6180214B2FD300A1C01A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDAB6190214B2FD500A1C01A /* LaunchScreen.storyboard in Resources */,
+				FDAB61A8214B32AA00A1C01A /* Colors.xcassets in Resources */,
+				FDAB618D214B2FD500A1C01A /* Assets.xcassets in Resources */,
+				FDAB618B214B2FD300A1C01A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDAB6194214B2FD500A1C01A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		909A8A408E264086CF61862A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kdRemedioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AB137659D3A73B8F5AF6C66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kdRemedio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC51EC14006A9C668CDD23CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDAB617E214B2FD300A1C01A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDAB6188214B2FD300A1C01A /* MapViewController.swift in Sources */,
+				FDAB6186214B2FD300A1C01A /* AppDelegate.swift in Sources */,
+				FDAB61B6214B3AA200A1C01A /* UbsList.swift in Sources */,
+				FDAB61A6214B313400A1C01A /* MedicineFinderTableViewController.swift in Sources */,
+				FDAB61B4214B3AA200A1C01A /* Medicine.swift in Sources */,
+				FDAB61AA214B3A4F00A1C01A /* json.swift in Sources */,
+				FDAB61BB214B45B700A1C01A /* DetailTableViewCell.swift in Sources */,
+				FDAB61B9214B444100A1C01A /* UbsManager.swift in Sources */,
+				FDAB61B2214B3AA200A1C01A /* Ubs.swift in Sources */,
+				FDAB61BD214EB94800A1C01A /* DetailTableViewController.swift in Sources */,
+				FDAB61B3214B3AA200A1C01A /* Coordinate.swift in Sources */,
+				FDAB61B7214B3AA200A1C01A /* Safe.swift in Sources */,
+				FDAB61B5214B3AA200A1C01A /* Links.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDAB6192214B2FD500A1C01A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDAB619B214B2FD500A1C01A /* kdRemedioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDAB6198214B2FD500A1C01A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDAB6181214B2FD300A1C01A /* kdRemedio */;
+			targetProxy = FDAB6197214B2FD500A1C01A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FDAB6189214B2FD300A1C01A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDAB618A214B2FD300A1C01A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDAB618E214B2FD500A1C01A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDAB618F214B2FD500A1C01A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDAB619D214B2FD500A1C01A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDAB619E214B2FD500A1C01A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDAB61A0214B2FD500A1C01A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48A2440723709B8C6BD223C4 /* Pods-kdRemedio.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kdRemedio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDAB61A1214B2FD500A1C01A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CAC3FB165A4EAC1B8607462 /* Pods-kdRemedio.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kdRemedio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDAB61A3214B2FD500A1C01A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C85F6929BB780B68065451DE /* Pods-kdRemedioTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kdRemedioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kdRemedio.app/kdRemedio";
+			};
+			name = Debug;
+		};
+		FDAB61A4214B2FD500A1C01A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E55436C662BE52D3B1679807 /* Pods-kdRemedioTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kdRemedioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kdRemedio.app/kdRemedio";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDAB617D214B2FD300A1C01A /* Build configuration list for PBXProject "kdRemedio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDAB619D214B2FD500A1C01A /* Debug */,
+				FDAB619E214B2FD500A1C01A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDAB619F214B2FD500A1C01A /* Build configuration list for PBXNativeTarget "kdRemedio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDAB61A0214B2FD500A1C01A /* Debug */,
+				FDAB61A1214B2FD500A1C01A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDAB61A2214B2FD500A1C01A /* Build configuration list for PBXNativeTarget "kdRemedioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDAB61A3214B2FD500A1C01A /* Debug */,
+				FDAB61A4214B2FD500A1C01A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDAB617A214B2FD300A1C01A /* Project object */;
+}
