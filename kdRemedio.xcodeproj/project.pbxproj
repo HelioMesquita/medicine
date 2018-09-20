@@ -28,6 +28,8 @@
 		FDAB61BB214B45B700A1C01A /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */; };
 		FDAB61BD214EB94800A1C01A /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */; };
 		FDB51A43215318D50083A6EA /* UbsMedicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB51A42215318D50083A6EA /* UbsMedicine.swift */; };
+		FDB51A49215326C60083A6EA /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB51A48215326C60083A6EA /* LoadingViewController.swift */; };
+		FDB51A4B215327A30083A6EA /* healthtap_spinner.json in Resources */ = {isa = PBXBuildFile; fileRef = FDB51A4A215327A30083A6EA /* healthtap_spinner.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		FDB51A42215318D50083A6EA /* UbsMedicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbsMedicine.swift; sourceTree = "<group>"; };
+		FDB51A48215326C60083A6EA /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		FDB51A4A215327A30083A6EA /* healthtap_spinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = healthtap_spinner.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,18 +139,11 @@
 		FDAB6184214B2FD300A1C01A /* kdRemedio */ = {
 			isa = PBXGroup;
 			children = (
-				FDAB61AB214B3A9800A1C01A /* Model */,
-				FDAB6185214B2FD300A1C01A /* AppDelegate.swift */,
-				FDAB6187214B2FD300A1C01A /* MapViewController.swift */,
-				FDAB61A5214B313400A1C01A /* MedicineFinderTableViewController.swift */,
-				FDAB6189214B2FD300A1C01A /* Main.storyboard */,
-				FDAB618C214B2FD500A1C01A /* Assets.xcassets */,
-				FDAB61A7214B32AA00A1C01A /* Colors.xcassets */,
-				FDAB618E214B2FD500A1C01A /* LaunchScreen.storyboard */,
-				FDAB6191214B2FD500A1C01A /* Info.plist */,
-				FDAB61A9214B3A4F00A1C01A /* json.swift */,
-				FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */,
-				FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */,
+				FDB51A4721531F0A0083A6EA /* Supporting Files */,
+				FDB51A4621531F030083A6EA /* Storyboard */,
+				FDB51A4521531EFD0083A6EA /* Views */,
+				FDB51A4421531EE10083A6EA /* Controllers */,
+				FDAB61AB214B3A9800A1C01A /* Models */,
 			);
 			path = kdRemedio;
 			sourceTree = "<group>";
@@ -160,7 +157,7 @@
 			path = kdRemedioTests;
 			sourceTree = "<group>";
 		};
-		FDAB61AB214B3A9800A1C01A /* Model */ = {
+		FDAB61AB214B3A9800A1C01A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				FDAB61B0214B3AA200A1C01A /* UbsList.swift */,
@@ -172,7 +169,48 @@
 				FDAB61B8214B444100A1C01A /* UbsManager.swift */,
 				FDB51A42215318D50083A6EA /* UbsMedicine.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDB51A4421531EE10083A6EA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDAB6187214B2FD300A1C01A /* MapViewController.swift */,
+				FDAB61A5214B313400A1C01A /* MedicineFinderTableViewController.swift */,
+				FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FDB51A4521531EFD0083A6EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */,
+				FDB51A48215326C60083A6EA /* LoadingViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDB51A4621531F030083A6EA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FDAB6189214B2FD300A1C01A /* Main.storyboard */,
+				FDAB618E214B2FD500A1C01A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FDB51A4721531F0A0083A6EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDB51A4A215327A30083A6EA /* healthtap_spinner.json */,
+				FDAB6185214B2FD300A1C01A /* AppDelegate.swift */,
+				FDAB618C214B2FD500A1C01A /* Assets.xcassets */,
+				FDAB61A7214B32AA00A1C01A /* Colors.xcassets */,
+				FDAB6191214B2FD500A1C01A /* Info.plist */,
+				FDAB61A9214B3A4F00A1C01A /* json.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +301,7 @@
 				FDAB61A8214B32AA00A1C01A /* Colors.xcassets in Resources */,
 				FDAB618D214B2FD500A1C01A /* Assets.xcassets in Resources */,
 				FDAB618B214B2FD300A1C01A /* Main.storyboard in Resources */,
+				FDB51A4B215327A30083A6EA /* healthtap_spinner.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,11 +360,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -341,6 +382,7 @@
 			files = (
 				FDAB6188214B2FD300A1C01A /* MapViewController.swift in Sources */,
 				FDAB6186214B2FD300A1C01A /* AppDelegate.swift in Sources */,
+				FDB51A49215326C60083A6EA /* LoadingViewController.swift in Sources */,
 				FDAB61B6214B3AA200A1C01A /* UbsList.swift in Sources */,
 				FDAB61A6214B313400A1C01A /* MedicineFinderTableViewController.swift in Sources */,
 				FDAB61B4214B3AA200A1C01A /* Medicine.swift in Sources */,
@@ -514,7 +556,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = kdRemedio/Info.plist;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = "$(SRCROOT)/kdRemedio/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,7 +575,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = kdRemedio/Info.plist;
+				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				INFOPLIST_FILE = "$(SRCROOT)/kdRemedio/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

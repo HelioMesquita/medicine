@@ -12,14 +12,15 @@ class MapViewController: UIViewController {
     super.viewDidLoad()
     configureSearchBar()
     configureMapView()
+    _ = LoadingViewController()
   }
 
   func configureMapView() {
     mapView?.userLocation.title = "Minha localização"
 
-    let locationManager = CLLocationManager()
-    locationManager.requestWhenInUseAuthorization()
-    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+//    let locationManager = CLLocationManager()
+//    locationManager.requestWhenInUseAuthorization()
+//    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
 
     firstly {
       CLLocationManager.requestLocation()

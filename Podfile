@@ -10,6 +10,7 @@ target 'kdRemedio' do
   pod 'PromiseKit'
   pod 'PromiseKit/MapKit'
   pod 'PromiseKit/CoreLocation', '~> 6.0'
+  pod 'lottie-ios'
 
   # Pods for kdRemedio
 

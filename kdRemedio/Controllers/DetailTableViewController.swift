@@ -14,5 +14,4 @@ class DetailTableViewController: UITableViewController {
     cell.setCell(ubsMedicine: list[indexPath.row])
     return cell
   }
-
 }
