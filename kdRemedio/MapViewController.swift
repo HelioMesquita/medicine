@@ -86,6 +86,8 @@ class MapViewController: UIViewController {
 extension MapViewController: MedicineFinderHandable {
   func presentDetailViewController(with name: String) {
     let detailViewController = storyboard?.instantiateViewController(withIdentifier: "detailViewController") as! DetailTableViewController
+    let list = UbsManager.getList().ubsWithMedicineWhere(contains: name)
+    detailViewController.list = list
     detailViewController.navigationItem.title = name
     navigationController?.pushViewController(detailViewController, animated: true)
   }

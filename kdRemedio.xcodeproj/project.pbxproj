@@ -23,10 +23,11 @@
 		FDAB61B4214B3AA200A1C01A /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AE214B3AA100A1C01A /* Medicine.swift */; };
 		FDAB61B5214B3AA200A1C01A /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AF214B3AA200A1C01A /* Links.swift */; };
 		FDAB61B6214B3AA200A1C01A /* UbsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B0214B3AA200A1C01A /* UbsList.swift */; };
-		FDAB61B7214B3AA200A1C01A /* Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B1214B3AA200A1C01A /* Safe.swift */; };
+		FDAB61B7214B3AA200A1C01A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B1214B3AA200A1C01A /* Link.swift */; };
 		FDAB61B9214B444100A1C01A /* UbsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B8214B444100A1C01A /* UbsManager.swift */; };
 		FDAB61BB214B45B700A1C01A /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */; };
 		FDAB61BD214EB94800A1C01A /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */; };
+		FDB51A43215318D50083A6EA /* UbsMedicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB51A42215318D50083A6EA /* UbsMedicine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,10 +65,11 @@
 		FDAB61AE214B3AA100A1C01A /* Medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 		FDAB61AF214B3AA200A1C01A /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		FDAB61B0214B3AA200A1C01A /* UbsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbsList.swift; sourceTree = "<group>"; };
-		FDAB61B1214B3AA200A1C01A /* Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safe.swift; sourceTree = "<group>"; };
+		FDAB61B1214B3AA200A1C01A /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		FDAB61B8214B444100A1C01A /* UbsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbsManager.swift; sourceTree = "<group>"; };
 		FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		FDB51A42215318D50083A6EA /* UbsMedicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbsMedicine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +168,9 @@
 				FDAB61AD214B3AA100A1C01A /* Coordinate.swift */,
 				FDAB61AF214B3AA200A1C01A /* Links.swift */,
 				FDAB61AE214B3AA100A1C01A /* Medicine.swift */,
-				FDAB61B1214B3AA200A1C01A /* Safe.swift */,
+				FDAB61B1214B3AA200A1C01A /* Link.swift */,
 				FDAB61B8214B444100A1C01A /* UbsManager.swift */,
+				FDB51A42215318D50083A6EA /* UbsMedicine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,10 +347,11 @@
 				FDAB61AA214B3A4F00A1C01A /* json.swift in Sources */,
 				FDAB61BB214B45B700A1C01A /* DetailTableViewCell.swift in Sources */,
 				FDAB61B9214B444100A1C01A /* UbsManager.swift in Sources */,
+				FDB51A43215318D50083A6EA /* UbsMedicine.swift in Sources */,
 				FDAB61B2214B3AA200A1C01A /* Ubs.swift in Sources */,
 				FDAB61BD214EB94800A1C01A /* DetailTableViewController.swift in Sources */,
 				FDAB61B3214B3AA200A1C01A /* Coordinate.swift in Sources */,
-				FDAB61B7214B3AA200A1C01A /* Safe.swift in Sources */,
+				FDAB61B7214B3AA200A1C01A /* Link.swift in Sources */,
 				FDAB61B5214B3AA200A1C01A /* Links.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,7 +515,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = kdRemedio/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -526,7 +533,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = kdRemedio/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -542,7 +552,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = kdRemedioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -559,7 +573,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = kdRemedioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

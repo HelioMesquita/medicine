@@ -1,5 +1,5 @@
 import Foundation
 
 struct Links: Decodable {
-	let safe: Safe?
+	let safe: Link?
 }

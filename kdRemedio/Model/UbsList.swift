@@ -39,11 +39,21 @@ class UbsList: Decodable {
     }
   }
 
-  func ubsWhere(contains medicineName: String) -> [Ubs] {
-    return list.filter { ubs -> Bool in
-      return ubs.medicines.filter { medicine -> Bool in
-        return medicine.name == medicineName
-      }.isEmpty
+  func ubsWithMedicineWhere(contains medicineName: String) -> [UbsMedicine] {
+    var ubsMedicineList: [UbsMedicine] = []
+
+    list.forEach { (ubs) in
+      if ubs.medicines.contains(where: { medicine -> Bool in return medicine.name == medicineName }) {
+        ubsMedicineList.append(UbsMedicine(medicineName: medicineName, ubs: ubs))
+      }
     }
+
+    return ubsMedicineList
+
+//    return list.filter { ubs -> Bool in
+//      return ubs.medicines.filter { medicine -> Bool in
+//        return medicine.name == medicineName
+//      }.isEmpty
+//    }
   }
 }

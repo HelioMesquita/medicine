@@ -1,6 +1,6 @@
 import Foundation
 
-struct Safe: Decodable {
+struct Link: Decodable {
 	let url: URL
 	let method: String?
 }
