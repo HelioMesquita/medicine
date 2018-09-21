@@ -53,11 +53,6 @@ class LoadingViewController: UIViewController {
     loadingView.frame = frame
     loadingView.center = view.center
     view.addSubview(loadingView)
-//    loadingView.translatesAutoresizingMaskIntoConstraints = false
-//    loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//    loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-//    loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
-//    loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 50).isActive = true
     loadingView.loopAnimation = true
     loadingView.play()
 
