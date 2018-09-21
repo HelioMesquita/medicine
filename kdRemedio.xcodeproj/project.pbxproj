@@ -30,6 +30,9 @@
 		FDB51A43215318D50083A6EA /* UbsMedicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB51A42215318D50083A6EA /* UbsMedicine.swift */; };
 		FDB51A49215326C60083A6EA /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB51A48215326C60083A6EA /* LoadingViewController.swift */; };
 		FDB51A4B215327A30083A6EA /* healthtap_spinner.json in Resources */ = {isa = PBXBuildFile; fileRef = FDB51A4A215327A30083A6EA /* healthtap_spinner.json */; };
+		FDF6C88F21545F74004A5D64 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6C88E21545F74004A5D64 /* Notification.swift */; };
+		FDF6C89321546AC5004A5D64 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6C89221546AC5004A5D64 /* APIClient.swift */; };
+		FDF6C89521546CD4004A5D64 /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6C89421546CD4004A5D64 /* MapViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		FDB51A42215318D50083A6EA /* UbsMedicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbsMedicine.swift; sourceTree = "<group>"; };
 		FDB51A48215326C60083A6EA /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		FDB51A4A215327A30083A6EA /* healthtap_spinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = healthtap_spinner.json; sourceTree = "<group>"; };
+		FDF6C88E21545F74004A5D64 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		FDF6C89221546AC5004A5D64 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		FDF6C89421546CD4004A5D64 /* MapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,8 @@
 		FDAB6184214B2FD300A1C01A /* kdRemedio */ = {
 			isa = PBXGroup;
 			children = (
+				FDF6C89121546AB9004A5D64 /* Network */,
+				FDF6C88D21545F63004A5D64 /* Extension */,
 				FDB51A4721531F0A0083A6EA /* Supporting Files */,
 				FDB51A4621531F030083A6EA /* Storyboard */,
 				FDB51A4521531EFD0083A6EA /* Views */,
@@ -175,7 +183,7 @@
 		FDB51A4421531EE10083A6EA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FDAB6187214B2FD300A1C01A /* MapViewController.swift */,
+				FDF6C89021546AAE004A5D64 /* MapViewController */,
 				FDAB61A5214B313400A1C01A /* MedicineFinderTableViewController.swift */,
 				FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */,
 			);
@@ -211,6 +219,31 @@
 				FDAB61A9214B3A4F00A1C01A /* json.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDF6C88D21545F63004A5D64 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FDF6C88E21545F74004A5D64 /* Notification.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FDF6C89021546AAE004A5D64 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FDAB6187214B2FD300A1C01A /* MapViewController.swift */,
+				FDF6C89421546CD4004A5D64 /* MapViewPresenter.swift */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		FDF6C89121546AB9004A5D64 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FDF6C89221546AC5004A5D64 /* APIClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,15 +414,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDAB6188214B2FD300A1C01A /* MapViewController.swift in Sources */,
+				FDF6C89321546AC5004A5D64 /* APIClient.swift in Sources */,
 				FDAB6186214B2FD300A1C01A /* AppDelegate.swift in Sources */,
 				FDB51A49215326C60083A6EA /* LoadingViewController.swift in Sources */,
 				FDAB61B6214B3AA200A1C01A /* UbsList.swift in Sources */,
+				FDF6C88F21545F74004A5D64 /* Notification.swift in Sources */,
 				FDAB61A6214B313400A1C01A /* MedicineFinderTableViewController.swift in Sources */,
 				FDAB61B4214B3AA200A1C01A /* Medicine.swift in Sources */,
 				FDAB61AA214B3A4F00A1C01A /* json.swift in Sources */,
 				FDAB61BB214B45B700A1C01A /* DetailTableViewCell.swift in Sources */,
 				FDAB61B9214B444100A1C01A /* UbsManager.swift in Sources */,
 				FDB51A43215318D50083A6EA /* UbsMedicine.swift in Sources */,
+				FDF6C89521546CD4004A5D64 /* MapViewPresenter.swift in Sources */,
 				FDAB61B2214B3AA200A1C01A /* Ubs.swift in Sources */,
 				FDAB61BD214EB94800A1C01A /* DetailTableViewController.swift in Sources */,
 				FDAB61B3214B3AA200A1C01A /* Coordinate.swift in Sources */,

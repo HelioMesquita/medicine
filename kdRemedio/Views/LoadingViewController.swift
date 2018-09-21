@@ -13,7 +13,7 @@ class LoadingViewController: UIViewController {
     window.isHidden = false
     window.rootViewController = self
 
-//    NotificationCenter.default.addObserver(self, selector: #selector(removeFromStack), name: .removeLoadingViewController, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(removeFromStack), name: .removeLoadingViewController, object: nil)
   }
 
   @objc func removeFromStack() {
