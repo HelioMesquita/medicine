@@ -6,7 +6,7 @@ protocol MapViewHandlable: class {
   func configureMapView()
   func showAlertError(error: Error)
   func setMapLocation(region: CLLocation)
-  func setMapAnnotations(annotations: [MKAnnotation])
+  func setMapAnnotations(annotations: [MKPointAnnotation])
 }
 
 class MapViewPresenter {

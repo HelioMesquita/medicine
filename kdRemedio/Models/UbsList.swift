@@ -19,8 +19,8 @@ class UbsList: Decodable {
     }
   }
 
-  func getAnnotations() -> [MKAnnotation] {
-    return list.map { ubs -> MKAnnotation in
+  func getAnnotations() -> [MKPointAnnotation] {
+    return list.map { ubs -> MKPointAnnotation in
       return ubs.annotation()
     }
   }

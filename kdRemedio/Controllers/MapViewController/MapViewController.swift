@@ -1,6 +1,5 @@
 import UIKit
 import MapKit
-import PromiseKit
 
 class MapViewController: UIViewController {
 
@@ -11,10 +10,45 @@ class MapViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    mapView?.delegate = self
     self.presenter = MapViewPresenter(delegate: self)
     presenter?.viewDidLoad()
   }
 
+}
+
+extension MapViewController: MKMapViewDelegate {
+  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    if annotation is MKUserLocation {
+      return nil
+    }
+
+    let reuseId = "Pin"
+    var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
+    if pinView == nil {
+      pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+      pinView?.canShowCallout = true
+
+      let rightButton: AnyObject! = UIButton(type: UIButtonType.detailDisclosure)
+      pinView?.rightCalloutAccessoryView = rightButton as? UIView
+    }
+    else {
+      pinView?.annotation = annotation
+    }
+
+    return pinView
+  }
+
+  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+
+  }
+
+  func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    print(#function)
+    if control == view.rightCalloutAccessoryView {
+      // Do something
+    }
+  }
 }
 
 extension MapViewController: MapViewHandlable {
@@ -53,7 +87,7 @@ extension MapViewController: MapViewHandlable {
     mapView?.setRegion(viewRegion, animated: true)
   }
 
-  func setMapAnnotations(annotations: [MKAnnotation]) {
+  func setMapAnnotations(annotations: [MKPointAnnotation]) {
     mapView?.addAnnotations(annotations)
   }
 }

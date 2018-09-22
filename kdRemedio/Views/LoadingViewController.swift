@@ -3,6 +3,8 @@ import UIKit
 
 class LoadingViewController: UIViewController {
 
+  private let window = LoadingWindow()
+
   required init?(coder aDecoder: NSCoder) {
     fatalError()
   }
@@ -35,7 +37,6 @@ class LoadingViewController: UIViewController {
       } as? LOTAnimationView
   }
 
-  private let window = LoadingWindow()
 
   override func loadView() {
     let view = UIView(frame: UIScreen.main.bounds)
