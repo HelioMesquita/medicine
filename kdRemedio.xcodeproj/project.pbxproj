@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		499549C559645DE6423EFC00 /* Pods_kdRemedio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEACB8193103DB5B612126A2 /* Pods_kdRemedio.framework */; };
 		49A307ECB51F3293BA070D15 /* Pods_kdRemedioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14780CE477068A73B05CDA88 /* Pods_kdRemedioTests.framework */; };
+		FD341DB32157D37600FEA928 /* UBSSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */; };
+		FD341DB52157DC9100FEA928 /* UBSAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */; };
 		FDAB6186214B2FD300A1C01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB6185214B2FD300A1C01A /* AppDelegate.swift */; };
 		FDAB6188214B2FD300A1C01A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB6187214B2FD300A1C01A /* MapViewController.swift */; };
 		FDAB618B214B2FD300A1C01A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAB6189214B2FD300A1C01A /* Main.storyboard */; };
@@ -18,15 +20,15 @@
 		FDAB61A6214B313400A1C01A /* MedicineFinderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61A5214B313400A1C01A /* MedicineFinderTableViewController.swift */; };
 		FDAB61A8214B32AA00A1C01A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAB61A7214B32AA00A1C01A /* Colors.xcassets */; };
 		FDAB61AA214B3A4F00A1C01A /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61A9214B3A4F00A1C01A /* json.swift */; };
-		FDAB61B2214B3AA200A1C01A /* Ubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AC214B3AA100A1C01A /* Ubs.swift */; };
+		FDAB61B2214B3AA200A1C01A /* UBS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AC214B3AA100A1C01A /* UBS.swift */; };
 		FDAB61B3214B3AA200A1C01A /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AD214B3AA100A1C01A /* Coordinate.swift */; };
 		FDAB61B4214B3AA200A1C01A /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AE214B3AA100A1C01A /* Medicine.swift */; };
 		FDAB61B5214B3AA200A1C01A /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AF214B3AA200A1C01A /* Links.swift */; };
-		FDAB61B6214B3AA200A1C01A /* UbsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B0214B3AA200A1C01A /* UbsList.swift */; };
+		FDAB61B6214B3AA200A1C01A /* UBSList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B0214B3AA200A1C01A /* UBSList.swift */; };
 		FDAB61B7214B3AA200A1C01A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B1214B3AA200A1C01A /* Link.swift */; };
 		FDAB61B9214B444100A1C01A /* UbsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B8214B444100A1C01A /* UbsManager.swift */; };
-		FDAB61BB214B45B700A1C01A /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */; };
-		FDAB61BD214EB94800A1C01A /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */; };
+		FDAB61BB214B45B700A1C01A /* UBSSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BA214B45B700A1C01A /* UBSSelectionCell.swift */; };
+		FDAB61BD214EB94800A1C01A /* UBSMedicineSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BC214EB94800A1C01A /* UBSMedicineSelectionTableViewController.swift */; };
 		FDB51A43215318D50083A6EA /* UbsMedicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB51A42215318D50083A6EA /* UbsMedicine.swift */; };
 		FDB51A49215326C60083A6EA /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB51A48215326C60083A6EA /* LoadingViewController.swift */; };
 		FDB51A4B215327A30083A6EA /* healthtap_spinner.json in Resources */ = {isa = PBXBuildFile; fileRef = FDB51A4A215327A30083A6EA /* healthtap_spinner.json */; };
@@ -52,6 +54,8 @@
 		C85F6929BB780B68065451DE /* Pods-kdRemedioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedioTests/Pods-kdRemedioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEACB8193103DB5B612126A2 /* Pods_kdRemedio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kdRemedio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55436C662BE52D3B1679807 /* Pods-kdRemedioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedioTests/Pods-kdRemedioTests.release.xcconfig"; sourceTree = "<group>"; };
+		FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSSelectionTableViewController.swift; sourceTree = "<group>"; };
+		FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSAnnotation.swift; sourceTree = "<group>"; };
 		FDAB6182214B2FD300A1C01A /* kdRemedio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kdRemedio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAB6185214B2FD300A1C01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDAB6187214B2FD300A1C01A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -65,15 +69,15 @@
 		FDAB61A5214B313400A1C01A /* MedicineFinderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineFinderTableViewController.swift; sourceTree = "<group>"; };
 		FDAB61A7214B32AA00A1C01A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		FDAB61A9214B3A4F00A1C01A /* json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
-		FDAB61AC214B3AA100A1C01A /* Ubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ubs.swift; sourceTree = "<group>"; };
+		FDAB61AC214B3AA100A1C01A /* UBS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBS.swift; sourceTree = "<group>"; };
 		FDAB61AD214B3AA100A1C01A /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		FDAB61AE214B3AA100A1C01A /* Medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 		FDAB61AF214B3AA200A1C01A /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
-		FDAB61B0214B3AA200A1C01A /* UbsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbsList.swift; sourceTree = "<group>"; };
+		FDAB61B0214B3AA200A1C01A /* UBSList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBSList.swift; sourceTree = "<group>"; };
 		FDAB61B1214B3AA200A1C01A /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		FDAB61B8214B444100A1C01A /* UbsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbsManager.swift; sourceTree = "<group>"; };
-		FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
-		FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		FDAB61BA214B45B700A1C01A /* UBSSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSSelectionCell.swift; sourceTree = "<group>"; };
+		FDAB61BC214EB94800A1C01A /* UBSMedicineSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSMedicineSelectionTableViewController.swift; sourceTree = "<group>"; };
 		FDB51A42215318D50083A6EA /* UbsMedicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbsMedicine.swift; sourceTree = "<group>"; };
 		FDB51A48215326C60083A6EA /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		FDB51A4A215327A30083A6EA /* healthtap_spinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = healthtap_spinner.json; sourceTree = "<group>"; };
@@ -168,14 +172,15 @@
 		FDAB61AB214B3A9800A1C01A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FDAB61B0214B3AA200A1C01A /* UbsList.swift */,
-				FDAB61AC214B3AA100A1C01A /* Ubs.swift */,
+				FDAB61B0214B3AA200A1C01A /* UBSList.swift */,
+				FDAB61AC214B3AA100A1C01A /* UBS.swift */,
 				FDAB61AD214B3AA100A1C01A /* Coordinate.swift */,
 				FDAB61AF214B3AA200A1C01A /* Links.swift */,
 				FDAB61AE214B3AA100A1C01A /* Medicine.swift */,
 				FDAB61B1214B3AA200A1C01A /* Link.swift */,
 				FDAB61B8214B444100A1C01A /* UbsManager.swift */,
 				FDB51A42215318D50083A6EA /* UbsMedicine.swift */,
+				FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,7 +190,8 @@
 			children = (
 				FDF6C89021546AAE004A5D64 /* MapViewController */,
 				FDAB61A5214B313400A1C01A /* MedicineFinderTableViewController.swift */,
-				FDAB61BC214EB94800A1C01A /* DetailTableViewController.swift */,
+				FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */,
+				FDAB61BC214EB94800A1C01A /* UBSMedicineSelectionTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,7 +199,7 @@
 		FDB51A4521531EFD0083A6EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FDAB61BA214B45B700A1C01A /* DetailTableViewCell.swift */,
+				FDAB61BA214B45B700A1C01A /* UBSSelectionCell.swift */,
 				FDB51A48215326C60083A6EA /* LoadingViewController.swift */,
 			);
 			path = Views;
@@ -417,18 +423,20 @@
 				FDF6C89321546AC5004A5D64 /* APIClient.swift in Sources */,
 				FDAB6186214B2FD300A1C01A /* AppDelegate.swift in Sources */,
 				FDB51A49215326C60083A6EA /* LoadingViewController.swift in Sources */,
-				FDAB61B6214B3AA200A1C01A /* UbsList.swift in Sources */,
+				FDAB61B6214B3AA200A1C01A /* UBSList.swift in Sources */,
 				FDF6C88F21545F74004A5D64 /* Notification.swift in Sources */,
 				FDAB61A6214B313400A1C01A /* MedicineFinderTableViewController.swift in Sources */,
 				FDAB61B4214B3AA200A1C01A /* Medicine.swift in Sources */,
 				FDAB61AA214B3A4F00A1C01A /* json.swift in Sources */,
-				FDAB61BB214B45B700A1C01A /* DetailTableViewCell.swift in Sources */,
+				FDAB61BB214B45B700A1C01A /* UBSSelectionCell.swift in Sources */,
 				FDAB61B9214B444100A1C01A /* UbsManager.swift in Sources */,
+				FD341DB52157DC9100FEA928 /* UBSAnnotation.swift in Sources */,
 				FDB51A43215318D50083A6EA /* UbsMedicine.swift in Sources */,
 				FDF6C89521546CD4004A5D64 /* MapViewPresenter.swift in Sources */,
-				FDAB61B2214B3AA200A1C01A /* Ubs.swift in Sources */,
-				FDAB61BD214EB94800A1C01A /* DetailTableViewController.swift in Sources */,
+				FDAB61B2214B3AA200A1C01A /* UBS.swift in Sources */,
+				FDAB61BD214EB94800A1C01A /* UBSMedicineSelectionTableViewController.swift in Sources */,
 				FDAB61B3214B3AA200A1C01A /* Coordinate.swift in Sources */,
+				FD341DB32157D37600FEA928 /* UBSSelectionTableViewController.swift in Sources */,
 				FDAB61B7214B3AA200A1C01A /* Link.swift in Sources */,
 				FDAB61B5214B3AA200A1C01A /* Links.swift in Sources */,
 			);

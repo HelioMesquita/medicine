@@ -1,10 +1,10 @@
 import Foundation
 import MapKit
 
-class UbsList: Decodable {
-	var list: [Ubs] = []
+class UBSList: Decodable {
+	var list: [UBS] = []
 
-  init(list: [Ubs]) {
+  init(list: [UBS]) {
     self.list = list
   }
 
@@ -12,16 +12,14 @@ class UbsList: Decodable {
     case list = "ubs"
   }
 
-  func updateWith(location: CLLocation?) {
+  func update(location: CLLocation?) {
     guard let location = location else { return }
-    list.forEach { ubs in
-      ubs.distance = Int(location.distance(from: ubs.coordinates())/1000)
-    }
+    list.forEach { $0.updateDistance(location: location) }
   }
 
-  func getAnnotations() -> [MKPointAnnotation] {
-    return list.map { ubs -> MKPointAnnotation in
-      return ubs.annotation()
+  func getAnnotations() -> [UBSAnnotation] {
+    return list.map { ubs -> UBSAnnotation in
+      return ubs.annotation
     }
   }
 
@@ -49,11 +47,5 @@ class UbsList: Decodable {
     }
 
     return ubsMedicineList
-
-//    return list.filter { ubs -> Bool in
-//      return ubs.medicines.filter { medicine -> Bool in
-//        return medicine.name == medicineName
-//      }.isEmpty
-//    }
   }
 }

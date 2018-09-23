@@ -1,7 +1,7 @@
 import UIKit
 
 protocol MedicineFinderHandable: class {
-  func presentDetailViewController(with name: String)
+  func presentUBSMedicineSelection(with medicineName: String)
 }
 
 class MedicineFinderTableViewController: UITableViewController {
@@ -21,8 +21,9 @@ class MedicineFinderTableViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
     guard let medicineName = tableView.cellForRow(at: indexPath)?.textLabel?.text else { return }
-    delegate?.presentDetailViewController(with: medicineName)
+    delegate?.presentUBSMedicineSelection(with: medicineName)
   }
 }
 

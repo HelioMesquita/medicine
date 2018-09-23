@@ -15,7 +15,7 @@ class UbsMedicine {
     self.medicine = medicine
   }
 
-  init(medicineName: String, ubs: Ubs) {
+  init(medicineName: String, ubs: UBS) {
     self.name = ubs.name
     self.address = ubs.address
     self.googleMaps = ubs.googleMaps

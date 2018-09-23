@@ -41,12 +41,12 @@ class MapViewPresenter {
     }
   }
 
-  private func makeRequest(location: CLLocation?) -> Promise<UbsList> {
+  private func makeRequest(location: CLLocation?) -> Promise<UBSList> {
     return Promise { seal in
       let data = json.data(using: .utf8)!
       do {
-        let ubsList = try JSONDecoder().decode(UbsList.self, from: data)
-        ubsList.updateWith(location: location)
+        let ubsList = try JSONDecoder().decode(UBSList.self, from: data)
+        ubsList.update(location: location)
         seal.fulfill(ubsList)
       } catch {
         seal.reject(error)

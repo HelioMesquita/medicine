@@ -1,6 +1,6 @@
 import UIKit
 
-class DetailTableViewCell: UITableViewCell {
+class UBSSelectionCell: UITableViewCell {
 
   @IBOutlet weak var name: UILabel?
   @IBOutlet weak var distance: UILabel?

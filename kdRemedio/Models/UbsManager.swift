@@ -3,13 +3,13 @@ import Foundation
 class UbsManager {
 
   private static var instance = UbsManager()
-  private var list: UbsList = UbsList(list: [])
+  private var list: UBSList = UBSList(list: [])
 
-  static func setList(list: UbsList) {
+  static func setList(list: UBSList) {
     instance.list = list
   }
 
-  static func getList() -> UbsList {
+  static func getList() -> UBSList {
     return instance.list
   }
 }

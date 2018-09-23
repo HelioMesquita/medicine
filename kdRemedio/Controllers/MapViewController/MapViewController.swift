@@ -11,43 +11,37 @@ class MapViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     mapView?.delegate = self
-    self.presenter = MapViewPresenter(delegate: self)
+    presenter = MapViewPresenter(delegate: self)
     presenter?.viewDidLoad()
   }
-
 }
 
 extension MapViewController: MKMapViewDelegate {
+
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    if annotation is MKUserLocation {
-      return nil
-    }
+    if annotation is MKUserLocation { return nil }
 
     let reuseId = "Pin"
     var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-    if pinView == nil {
+    if let pinView = pinView {
+      pinView.annotation = annotation
+    } else {
       pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
       pinView?.canShowCallout = true
 
-      let rightButton: AnyObject! = UIButton(type: UIButtonType.detailDisclosure)
-      pinView?.rightCalloutAccessoryView = rightButton as? UIView
-    }
-    else {
-      pinView?.annotation = annotation
+      let rightButton = UIButton(type: UIButtonType.detailDisclosure)
+      pinView?.rightCalloutAccessoryView = rightButton
     }
 
     return pinView
   }
 
-  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-
-  }
-
   func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-    print(#function)
-    if control == view.rightCalloutAccessoryView {
-      // Do something
-    }
+    let ubsSelectionVC = storyboard?.instantiateViewController(withIdentifier: "ubsSelection") as! UBSSelectionTableViewController
+    guard let ubsAnnotation = view.annotation as? UBSAnnotation else { return }
+    ubsSelectionVC.ubs = ubsAnnotation.ubs
+    ubsSelectionVC.navigationItem.title = view.annotation?.title ?? ""
+    navigationController?.pushViewController(ubsSelectionVC, animated: true)
   }
 }
 
@@ -58,11 +52,11 @@ extension MapViewController: MapViewHandlable {
   }
 
   func configureSearchBar() {
-    let medicineViewController = storyboard?.instantiateViewController(withIdentifier: "medicineViewController") as! MedicineFinderTableViewController
-    medicineViewController.delegate = self
+    let medicineFinderViewController = storyboard?.instantiateViewController(withIdentifier: "finder") as! MedicineFinderTableViewController
+    medicineFinderViewController.delegate = self
 
-    resultSearchController = UISearchController(searchResultsController: medicineViewController)
-    resultSearchController?.searchResultsUpdater = medicineViewController
+    resultSearchController = UISearchController(searchResultsController: medicineFinderViewController)
+    resultSearchController?.searchResultsUpdater = medicineFinderViewController
     resultSearchController?.obscuresBackgroundDuringPresentation = false
     resultSearchController?.hidesNavigationBarDuringPresentation = false
     resultSearchController?.dimsBackgroundDuringPresentation = true
@@ -93,11 +87,12 @@ extension MapViewController: MapViewHandlable {
 }
 
 extension MapViewController: MedicineFinderHandable {
-  func presentDetailViewController(with name: String) {
-    let detailViewController = storyboard?.instantiateViewController(withIdentifier: "detailViewController") as! DetailTableViewController
-    let list = UbsManager.getList().ubsWithMedicineWhere(contains: name)
-    detailViewController.list = list
-    detailViewController.navigationItem.title = name
-    navigationController?.pushViewController(detailViewController, animated: true)
+
+  func presentUBSMedicineSelection(with medicineName: String) {
+    let ubsMedicineSelectionVC = storyboard?.instantiateViewController(withIdentifier: "medicineSelection") as! UBSMedicineSelectionTableViewController
+    let list = UbsManager.getList().ubsWithMedicineWhere(contains: medicineName)
+    ubsMedicineSelectionVC.list = list
+    ubsMedicineSelectionVC.navigationItem.title = medicineName
+    navigationController?.pushViewController(ubsMedicineSelectionVC, animated: true)
   }
 }
