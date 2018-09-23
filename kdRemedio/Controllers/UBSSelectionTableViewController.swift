@@ -9,6 +9,10 @@ class UBSSelectionTableViewController: UITableViewController {
     return rows
   }
 
+  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return ubs?.headerTitle
+  }
+
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
     let medicine = ubs?.medicines[indexPath.row]

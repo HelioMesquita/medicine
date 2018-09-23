@@ -5,9 +5,9 @@ class UbsMedicine {
   let address: String
   let googleMaps: URL
   let medicine: Medicine?
-  var distance: Int?
+  var distance: String?
 
-  init(name: String, address: String, googleMaps: URL, medicine: Medicine, distance: Int?) {
+  init(name: String, address: String, googleMaps: URL, medicine: Medicine, distance: String?) {
     self.name = name
     self.address = address
     self.googleMaps = googleMaps
@@ -15,13 +15,11 @@ class UbsMedicine {
     self.medicine = medicine
   }
 
-  init(medicineName: String, ubs: UBS) {
+  init(medicine: Medicine, ubs: UBS) {
     self.name = ubs.name
     self.address = ubs.address
     self.googleMaps = ubs.googleMaps
     self.distance = ubs.distance
-    self.medicine = ubs.medicines.first { (medicine) -> Bool in
-      return medicine.name == medicineName
-    }
+    self.medicine = medicine
   }
 }

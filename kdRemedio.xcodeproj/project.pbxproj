@@ -172,15 +172,15 @@
 		FDAB61AB214B3A9800A1C01A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FDAB61B8214B444100A1C01A /* UbsManager.swift */,
 				FDAB61B0214B3AA200A1C01A /* UBSList.swift */,
+				FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */,
 				FDAB61AC214B3AA100A1C01A /* UBS.swift */,
 				FDAB61AD214B3AA100A1C01A /* Coordinate.swift */,
 				FDAB61AF214B3AA200A1C01A /* Links.swift */,
 				FDAB61AE214B3AA100A1C01A /* Medicine.swift */,
 				FDAB61B1214B3AA200A1C01A /* Link.swift */,
-				FDAB61B8214B444100A1C01A /* UbsManager.swift */,
 				FDB51A42215318D50083A6EA /* UbsMedicine.swift */,
-				FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

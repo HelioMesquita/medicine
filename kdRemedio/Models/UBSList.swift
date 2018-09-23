@@ -24,15 +24,17 @@ class UBSList: Decodable {
   }
 
   func medicinesNameWhere(contains letters: String) -> [String] {
-    var medicines: Set<String> = []
-
-    list.forEach { ubs in
-      ubs.medicines.forEach{ medicine in
-        medicines.insert(medicine.name)
-      }
+    var allMedicines: [Medicine] = []
+    list.forEach { (ubs) in
+      allMedicines.append(contentsOf: ubs.medicines)
     }
 
-    return medicines.filter { word -> Bool in
+    var setMedicines: Set<String> = []
+    allMedicines.forEach { medicine in
+      setMedicines.insert(medicine.name)
+    }
+
+    return setMedicines.filter { word -> Bool in
       return word.contains(letters)
     }
   }
@@ -41,8 +43,12 @@ class UBSList: Decodable {
     var ubsMedicineList: [UbsMedicine] = []
 
     list.forEach { (ubs) in
-      if ubs.medicines.contains(where: { medicine -> Bool in return medicine.name == medicineName }) {
-        ubsMedicineList.append(UbsMedicine(medicineName: medicineName, ubs: ubs))
+      let medicine = ubs.medicines.first(where: { (medicine) -> Bool in
+        return medicine.name == medicineName
+      })
+
+      if let medicine = medicine {
+        ubsMedicineList.append(UbsMedicine(medicine: medicine, ubs: ubs))
       }
     }
 

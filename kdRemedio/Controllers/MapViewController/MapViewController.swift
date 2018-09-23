@@ -39,8 +39,9 @@ extension MapViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
     let ubsSelectionVC = storyboard?.instantiateViewController(withIdentifier: "ubsSelection") as! UBSSelectionTableViewController
     guard let ubsAnnotation = view.annotation as? UBSAnnotation else { return }
-    ubsSelectionVC.ubs = ubsAnnotation.ubs
-    ubsSelectionVC.navigationItem.title = view.annotation?.title ?? ""
+    let ubs = ubsAnnotation.ubs
+    ubsSelectionVC.ubs = ubs
+    ubsSelectionVC.navigationItem.title = ubs.name
     navigationController?.pushViewController(ubsSelectionVC, animated: true)
   }
 }

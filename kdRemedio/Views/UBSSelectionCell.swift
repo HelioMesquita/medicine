@@ -11,7 +11,7 @@ class UBSSelectionCell: UITableViewCell {
     address?.text = ubsMedicine.address
     name?.text = ubsMedicine.name
     if let distance = ubsMedicine.distance {
-      self.distance?.text = "\(distance) km"
+      self.distance?.text = distance
     }
     if let available = ubsMedicine.medicine?.available {
       self.available?.text = "\(available) unidades"
