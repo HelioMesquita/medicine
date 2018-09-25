@@ -11,6 +11,7 @@
 		49A307ECB51F3293BA070D15 /* Pods_kdRemedioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14780CE477068A73B05CDA88 /* Pods_kdRemedioTests.framework */; };
 		FD341DB32157D37600FEA928 /* UBSSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */; };
 		FD341DB52157DC9100FEA928 /* UBSAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */; };
+		FDA7E8552159C18100BBA355 /* MedicineReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E8542159C18100BBA355 /* MedicineReservationViewController.swift */; };
 		FDAB6186214B2FD300A1C01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB6185214B2FD300A1C01A /* AppDelegate.swift */; };
 		FDAB6188214B2FD300A1C01A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB6187214B2FD300A1C01A /* MapViewController.swift */; };
 		FDAB618B214B2FD300A1C01A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAB6189214B2FD300A1C01A /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		E55436C662BE52D3B1679807 /* Pods-kdRemedioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedioTests/Pods-kdRemedioTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSSelectionTableViewController.swift; sourceTree = "<group>"; };
 		FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSAnnotation.swift; sourceTree = "<group>"; };
+		FDA7E8542159C18100BBA355 /* MedicineReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineReservationViewController.swift; sourceTree = "<group>"; };
 		FDAB6182214B2FD300A1C01A /* kdRemedio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kdRemedio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAB6185214B2FD300A1C01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDAB6187214B2FD300A1C01A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				FDAB61A5214B313400A1C01A /* MedicineFinderTableViewController.swift */,
 				FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */,
 				FDAB61BC214EB94800A1C01A /* UBSMedicineSelectionTableViewController.swift */,
+				FDA7E8542159C18100BBA355 /* MedicineReservationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -305,9 +308,11 @@
 				TargetAttributes = {
 					FDAB6181214B2FD300A1C01A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					FDAB6195214B2FD500A1C01A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = FDAB6181214B2FD300A1C01A;
 					};
 				};
@@ -421,6 +426,7 @@
 			files = (
 				FDAB6188214B2FD300A1C01A /* MapViewController.swift in Sources */,
 				FDF6C89321546AC5004A5D64 /* APIClient.swift in Sources */,
+				FDA7E8552159C18100BBA355 /* MedicineReservationViewController.swift in Sources */,
 				FDAB6186214B2FD300A1C01A /* AppDelegate.swift in Sources */,
 				FDB51A49215326C60083A6EA /* LoadingViewController.swift in Sources */,
 				FDAB61B6214B3AA200A1C01A /* UBSList.swift in Sources */,
@@ -608,7 +614,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -627,7 +633,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -647,7 +653,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kdRemedio.app/kdRemedio";
 			};
@@ -668,7 +674,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kdRemedio.app/kdRemedio";
 			};

@@ -29,7 +29,7 @@ extension MapViewController: MKMapViewDelegate {
       pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
       pinView?.canShowCallout = true
 
-      let rightButton = UIButton(type: UIButtonType.detailDisclosure)
+      let rightButton = UIButton(type: UIButton.ButtonType.detailDisclosure)
       pinView?.rightCalloutAccessoryView = rightButton
     }
 
@@ -78,7 +78,7 @@ extension MapViewController: MapViewHandlable {
   }
 
   func setMapLocation(region: CLLocation) {
-    let viewRegion = MKCoordinateRegionMakeWithDistance(region.coordinate, 6000, 6000)
+    let viewRegion = MKCoordinateRegion.init(center: region.coordinate, latitudinalMeters: 6000, longitudinalMeters: 6000)
     mapView?.setRegion(viewRegion, animated: true)
   }
 
