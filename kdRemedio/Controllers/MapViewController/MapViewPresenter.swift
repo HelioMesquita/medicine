@@ -24,8 +24,9 @@ class MapViewPresenter {
   }
 
   private func load() {
-    _ = LoadingViewController()
     firstly {
+      after(seconds: 0).done { _ = LoadingViewController() }
+    }.then {
       CLLocationManager.requestLocation()
     }.firstValue.get { region in
       self.delegate?.setMapLocation(region: region)
