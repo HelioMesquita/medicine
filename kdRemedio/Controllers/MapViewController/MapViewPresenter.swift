@@ -37,7 +37,9 @@ class MapViewPresenter {
     }.catch { error in
       self.delegate?.showAlertError(error: error)
     }.finally {
-      NotificationCenter.default.post(name: .removeLoadingViewController, object: nil, userInfo: nil)
+      DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
+        NotificationCenter.default.post(name: .removeLoadingViewController, object: nil, userInfo: nil)
+      })
     }
   }
 
