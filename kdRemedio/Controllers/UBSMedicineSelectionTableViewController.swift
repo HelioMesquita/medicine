@@ -17,5 +17,9 @@ class UBSMedicineSelectionTableViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
+    let viewController = storyboard?.instantiateViewController(withIdentifier: "reservation") as! MedicineReservationViewController
+    viewController.ubsMedicine = list[indexPath.row]
+    viewController.navigationItem.title = "Selecione"
+    navigationController?.pushViewController(viewController, animated: true)
   }
 }
