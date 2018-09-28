@@ -1,21 +1,21 @@
 PODS:
   - Alamofire (4.7.3)
   - lottie-ios (2.5.0)
-  - PromiseKit (6.4.0):
-    - PromiseKit/CorePromise (= 6.4.0)
-    - PromiseKit/Foundation (= 6.4.0)
-    - PromiseKit/UIKit (= 6.4.0)
-  - PromiseKit/Alamofire (6.4.0):
+  - PromiseKit (6.4.1):
+    - PromiseKit/CorePromise (= 6.4.1)
+    - PromiseKit/Foundation (= 6.4.1)
+    - PromiseKit/UIKit (= 6.4.1)
+  - PromiseKit/Alamofire (6.4.1):
     - Alamofire (~> 4.0)
     - PromiseKit/CorePromise
-  - PromiseKit/CoreLocation (6.4.0):
+  - PromiseKit/CoreLocation (6.4.1):
     - PromiseKit/CorePromise
-  - PromiseKit/CorePromise (6.4.0)
-  - PromiseKit/Foundation (6.4.0):
+  - PromiseKit/CorePromise (6.4.1)
+  - PromiseKit/Foundation (6.4.1):
     - PromiseKit/CorePromise
-  - PromiseKit/MapKit (6.4.0):
+  - PromiseKit/MapKit (6.4.1):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.4.0):
+  - PromiseKit/UIKit (6.4.1):
     - PromiseKit/CorePromise
 
 DEPENDENCIES:
@@ -23,7 +23,7 @@ DEPENDENCIES:
   - lottie-ios
   - PromiseKit
   - PromiseKit/Alamofire
-  - PromiseKit/CoreLocation (~> 6.0)
+  - PromiseKit/CoreLocation
   - PromiseKit/MapKit
 
 SPEC REPOS:
@@ -35,8 +35,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
-  PromiseKit: ae3616f45d7bb9bf4ff1e91abc9b7a8c48a340e0
+  PromiseKit: 4c76a6506638034e3d7bede97b2ff7743f7bd2dc
 
-PODFILE CHECKSUM: 82087efebf37a601cf8067320b22185ffec45e10
+PODFILE CHECKSUM: 96d7e97da61151b8b583e50227613ec555b61257
 
 COCOAPODS: 1.5.3

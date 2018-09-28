@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		499549C559645DE6423EFC00 /* Pods_kdRemedio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEACB8193103DB5B612126A2 /* Pods_kdRemedio.framework */; };
-		49A307ECB51F3293BA070D15 /* Pods_kdRemedioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14780CE477068A73B05CDA88 /* Pods_kdRemedioTests.framework */; };
+		9780EF9D80F54A3EA4F49004 /* Pods_kdRemedioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720152D7F3435B90B3664E65 /* Pods_kdRemedioTests.framework */; };
+		D3F01FDFDCEE9E496E1F8FCA /* Pods_kdRemedio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964AA3AD3297EB86FA193050 /* Pods_kdRemedio.framework */; };
 		FD341DB32157D37600FEA928 /* UBSSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */; };
 		FD341DB52157DC9100FEA928 /* UBSAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */; };
 		FDA7E8552159C18100BBA355 /* MedicineReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E8542159C18100BBA355 /* MedicineReservationViewController.swift */; };
@@ -49,12 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14780CE477068A73B05CDA88 /* Pods_kdRemedioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kdRemedioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48A2440723709B8C6BD223C4 /* Pods-kdRemedio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio.debug.xcconfig"; sourceTree = "<group>"; };
-		9CAC3FB165A4EAC1B8607462 /* Pods-kdRemedio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedio.release.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio.release.xcconfig"; sourceTree = "<group>"; };
-		C85F6929BB780B68065451DE /* Pods-kdRemedioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedioTests/Pods-kdRemedioTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CEACB8193103DB5B612126A2 /* Pods_kdRemedio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kdRemedio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E55436C662BE52D3B1679807 /* Pods-kdRemedioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedioTests/Pods-kdRemedioTests.release.xcconfig"; sourceTree = "<group>"; };
+		42B3A9E1D5078771ED4D794D /* Pods-kdRemedio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio.debug.xcconfig"; sourceTree = "<group>"; };
+		5267B2EDBB645B111B7016C7 /* Pods-kdRemedioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedioTests/Pods-kdRemedioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		720152D7F3435B90B3664E65 /* Pods_kdRemedioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kdRemedioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		964AA3AD3297EB86FA193050 /* Pods_kdRemedio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kdRemedio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCF7D6D320631B5659AFDED /* Pods-kdRemedio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedio.release.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio.release.xcconfig"; sourceTree = "<group>"; };
 		FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSSelectionTableViewController.swift; sourceTree = "<group>"; };
 		FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSAnnotation.swift; sourceTree = "<group>"; };
 		FDA7E8542159C18100BBA355 /* MedicineReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineReservationViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		FDF6C88E21545F74004A5D64 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		FDF6C89221546AC5004A5D64 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		FDF6C89421546CD4004A5D64 /* MapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
+		FE6B737F7A2DD56878F77E93 /* Pods-kdRemedioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedioTests/Pods-kdRemedioTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				499549C559645DE6423EFC00 /* Pods_kdRemedio.framework in Frameworks */,
+				D3F01FDFDCEE9E496E1F8FCA /* Pods_kdRemedio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,29 +101,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A307ECB51F3293BA070D15 /* Pods_kdRemedioTests.framework in Frameworks */,
+				9780EF9D80F54A3EA4F49004 /* Pods_kdRemedioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4AD524B114D86E89EC6F24B8 /* Pods */ = {
+		22FDCA91E7AC69213567F14A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				48A2440723709B8C6BD223C4 /* Pods-kdRemedio.debug.xcconfig */,
-				9CAC3FB165A4EAC1B8607462 /* Pods-kdRemedio.release.xcconfig */,
-				C85F6929BB780B68065451DE /* Pods-kdRemedioTests.debug.xcconfig */,
-				E55436C662BE52D3B1679807 /* Pods-kdRemedioTests.release.xcconfig */,
+				42B3A9E1D5078771ED4D794D /* Pods-kdRemedio.debug.xcconfig */,
+				EFCF7D6D320631B5659AFDED /* Pods-kdRemedio.release.xcconfig */,
+				5267B2EDBB645B111B7016C7 /* Pods-kdRemedioTests.debug.xcconfig */,
+				FE6B737F7A2DD56878F77E93 /* Pods-kdRemedioTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B60DEB08C843A94D20A6DA5D /* Frameworks */ = {
+		883B26618D6AD4095A040DA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CEACB8193103DB5B612126A2 /* Pods_kdRemedio.framework */,
-				14780CE477068A73B05CDA88 /* Pods_kdRemedioTests.framework */,
+				964AA3AD3297EB86FA193050 /* Pods_kdRemedio.framework */,
+				720152D7F3435B90B3664E65 /* Pods_kdRemedioTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,8 +134,8 @@
 				FDAB6184214B2FD300A1C01A /* kdRemedio */,
 				FDAB6199214B2FD500A1C01A /* kdRemedioTests */,
 				FDAB6183214B2FD300A1C01A /* Products */,
-				4AD524B114D86E89EC6F24B8 /* Pods */,
-				B60DEB08C843A94D20A6DA5D /* Frameworks */,
+				22FDCA91E7AC69213567F14A /* Pods */,
+				883B26618D6AD4095A040DA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,11 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDAB619F214B2FD500A1C01A /* Build configuration list for PBXNativeTarget "kdRemedio" */;
 			buildPhases = (
-				9AB137659D3A73B8F5AF6C66 /* [CP] Check Pods Manifest.lock */,
+				246119908FF18FED36848E69 /* [CP] Check Pods Manifest.lock */,
 				FDAB617E214B2FD300A1C01A /* Sources */,
 				FDAB617F214B2FD300A1C01A /* Frameworks */,
 				FDAB6180214B2FD300A1C01A /* Resources */,
-				FC51EC14006A9C668CDD23CF /* [CP] Embed Pods Frameworks */,
+				171D81B487EF16BBD5BB0C29 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,7 +281,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDAB61A2214B2FD500A1C01A /* Build configuration list for PBXNativeTarget "kdRemedioTests" */;
 			buildPhases = (
-				909A8A408E264086CF61862A /* [CP] Check Pods Manifest.lock */,
+				F507D275F9D3F22021391E81 /* [CP] Check Pods Manifest.lock */,
 				FDAB6192214B2FD500A1C01A /* Sources */,
 				FDAB6193214B2FD500A1C01A /* Frameworks */,
 				FDAB6194214B2FD500A1C01A /* Resources */,
@@ -359,43 +359,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		909A8A408E264086CF61862A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-kdRemedioTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9AB137659D3A73B8F5AF6C66 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-kdRemedio-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FC51EC14006A9C668CDD23CF /* [CP] Embed Pods Frameworks */ = {
+		171D81B487EF16BBD5BB0C29 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,6 +379,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		246119908FF18FED36848E69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kdRemedio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F507D275F9D3F22021391E81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kdRemedioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -602,7 +602,7 @@
 		};
 		FDAB61A0214B2FD500A1C01A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48A2440723709B8C6BD223C4 /* Pods-kdRemedio.debug.xcconfig */;
+			baseConfigurationReference = 42B3A9E1D5078771ED4D794D /* Pods-kdRemedio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -615,13 +615,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		FDAB61A1214B2FD500A1C01A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CAC3FB165A4EAC1B8607462 /* Pods-kdRemedio.release.xcconfig */;
+			baseConfigurationReference = EFCF7D6D320631B5659AFDED /* Pods-kdRemedio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -634,13 +634,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		FDAB61A3214B2FD500A1C01A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C85F6929BB780B68065451DE /* Pods-kdRemedioTests.debug.xcconfig */;
+			baseConfigurationReference = 5267B2EDBB645B111B7016C7 /* Pods-kdRemedioTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -661,7 +661,7 @@
 		};
 		FDAB61A4214B2FD500A1C01A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E55436C662BE52D3B1679807 /* Pods-kdRemedioTests.release.xcconfig */;
+			baseConfigurationReference = FE6B737F7A2DD56878F77E93 /* Pods-kdRemedioTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
