@@ -6,7 +6,11 @@ protocol MedicineFinderHandable: class {
 
 class MedicineFinderTableViewController: UITableViewController {
 
-  var medicines: [String] = []
+  var medicines: [String] = [] {
+    didSet {
+      self.tableView.reloadData()
+    }
+  }
   weak var delegate: MedicineFinderHandable?
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,6 +36,5 @@ extension MedicineFinderTableViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
     guard let searchBarText = searchController.searchBar.text else { return }
     medicines = UbsManager.getList().medicinesNameWhere(contains: searchBarText)
-    tableView.reloadData()
   }
 }

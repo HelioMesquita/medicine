@@ -23,24 +23,24 @@ class MapViewPresenter {
     load()
   }
 
-  private func load() {
+  func load() {
     firstly {
       showLoading()
-      }.then {
-        CLLocationManager.requestLocation()
-      }.firstValue.get { region in
-        self.delegate?.setMapLocation(region: region)
-      }.then { location in
-        self.makeRequest(location: location)
-      }.done { ubslist in
-        self.delegate?.setMapAnnotations(annotations: ubslist.getAnnotations())
-        UbsManager.setList(list: ubslist)
-      }.catch { error in
-        self.delegate?.showAlertError(error: error)
-      }.finally {
-        DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
-          NotificationCenter.default.post(name: .removeLoadingViewController, object: nil, userInfo: nil)
-        })
+    }.then {
+      CLLocationManager.requestLocation()
+    }.firstValue.get { region in
+      self.delegate?.setMapLocation(region: region)
+    }.then { location in
+      self.makeRequest(location: location)
+    }.done { ubslist in
+      self.delegate?.setMapAnnotations(annotations: ubslist.getAnnotations())
+      UbsManager.setList(list: ubslist)
+    }.catch { error in
+      self.delegate?.showAlertError(error: error)
+    }.finally {
+      DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
+        NotificationCenter.default.post(name: .removeLoadingViewController, object: nil, userInfo: nil)
+      })
     }
   }
 

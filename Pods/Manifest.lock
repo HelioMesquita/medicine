@@ -17,6 +17,9 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.4.1):
     - PromiseKit/CorePromise
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -25,18 +28,23 @@ DEPENDENCIES:
   - PromiseKit/Alamofire
   - PromiseKit/CoreLocation
   - PromiseKit/MapKit
+  - R.swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - lottie-ios
     - PromiseKit
+    - R.swift
+    - R.swift.Library
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   PromiseKit: 4c76a6506638034e3d7bede97b2ff7743f7bd2dc
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
 
-PODFILE CHECKSUM: 96d7e97da61151b8b583e50227613ec555b61257
+PODFILE CHECKSUM: ae118cc9272032246f0e9219c0a80df4767dc038
 
 COCOAPODS: 1.5.3

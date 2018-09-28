@@ -37,12 +37,11 @@ extension MapViewController: MKMapViewDelegate {
   }
 
   func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-    let ubsSelectionVC = storyboard?.instantiateViewController(withIdentifier: "ubsSelection") as! UBSSelectionTableViewController
-    guard let ubsAnnotation = view.annotation as? UBSAnnotation else { return }
+    guard let viewController = R.storyboard.main.medicineSelection(), let ubsAnnotation = view.annotation as? UBSAnnotation else { return }
     let ubs = ubsAnnotation.ubs
-    ubsSelectionVC.ubs = ubs
-    ubsSelectionVC.navigationItem.title = ubs.name
-    navigationController?.pushViewController(ubsSelectionVC, animated: true)
+    viewController.ubs = ubs
+    viewController.navigationItem.title = ubs.name
+    navigationController?.pushViewController(viewController, animated: true)
   }
 }
 
@@ -53,8 +52,8 @@ extension MapViewController: MapViewHandlable {
   }
 
   func configureSearchBar() {
-    let medicineFinderViewController = storyboard?.instantiateViewController(withIdentifier: "finder") as! MedicineFinderTableViewController
-    medicineFinderViewController.delegate = self
+    let medicineFinderViewController = R.storyboard.main.medicineFinder()
+    medicineFinderViewController?.delegate = self
 
     resultSearchController = UISearchController(searchResultsController: medicineFinderViewController)
     resultSearchController?.searchResultsUpdater = medicineFinderViewController
@@ -74,7 +73,11 @@ extension MapViewController: MapViewHandlable {
   }
 
   func showAlertError(error: Error) {
-
+    let alert = UIAlertController(title: "Alerta", message: "Ocorreu um erro \(error.localizedDescription)", preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "Tentar novamente", style: .default, handler: { _ in
+      self.presenter?.load()
+    }))
+    present(alert, animated: true, completion: nil)
   }
 
   func setMapLocation(region: CLLocation) {
@@ -90,7 +93,7 @@ extension MapViewController: MapViewHandlable {
 extension MapViewController: MedicineFinderHandable {
 
   func presentUBSMedicineSelection(with medicineName: String) {
-    let ubsMedicineSelectionVC = storyboard?.instantiateViewController(withIdentifier: "medicineSelection") as! UBSMedicineSelectionTableViewController
+    guard let ubsMedicineSelectionVC = R.storyboard.main.ubsSelection() else { return }
     let list = UbsManager.getList().ubsWithMedicineWhere(contains: medicineName)
     ubsMedicineSelectionVC.list = list
     ubsMedicineSelectionVC.navigationItem.title = medicineName

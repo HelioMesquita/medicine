@@ -12,6 +12,7 @@ target 'kdRemedio' do
   pod 'PromiseKit/CoreLocation'
   pod 'PromiseKit/Alamofire'
   pod 'lottie-ios'
+  pod 'R.swift'
 
   # Pods for kdRemedio
 

@@ -44,7 +44,7 @@
         <!--Medicine Selection Table View Controller-->
         <scene sceneID="QH0-Ix-vgZ">
             <objects>
-                <tableViewController storyboardIdentifier="medicineSelection" id="I39-af-smQ" customClass="UBSMedicineSelectionTableViewController" customModule="kdRemedio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ubsSelection" id="I39-af-smQ" customClass="UBSMedicineSelectionTableViewController" customModule="kdRemedio" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EUw-N5-Seo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
         <!--Selection Table View Controller-->
         <scene sceneID="DIB-tA-deh">
             <objects>
-                <tableViewController storyboardIdentifier="ubsSelection" id="sZb-PO-XPi" customClass="UBSSelectionTableViewController" customModule="kdRemedio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="medicineSelection" id="sZb-PO-XPi" customClass="UBSSelectionTableViewController" customModule="kdRemedio" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MFh-lc-iRB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,7 +161,7 @@
         <!--Medicine Finder Table View Controller-->
         <scene sceneID="efG-Jp-8M8">
             <objects>
-                <tableViewController storyboardIdentifier="finder" id="vHk-aW-IcS" customClass="MedicineFinderTableViewController" customModule="kdRemedio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="medicineFinder" id="vHk-aW-IcS" customClass="MedicineFinderTableViewController" customModule="kdRemedio" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uiV-Du-pqb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,7 +339,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gy-wq-Uq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5388" y="113.79310344827587"/>
+            <point key="canvasLocation" x="4570" y="114"/>
         </scene>
     </scenes>
     <resources>

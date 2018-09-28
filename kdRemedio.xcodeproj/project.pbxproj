@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9780EF9D80F54A3EA4F49004 /* Pods_kdRemedioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720152D7F3435B90B3664E65 /* Pods_kdRemedioTests.framework */; };
 		D3F01FDFDCEE9E496E1F8FCA /* Pods_kdRemedio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964AA3AD3297EB86FA193050 /* Pods_kdRemedio.framework */; };
+		FD274B7C215DB1210086D96E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD274B7B215DB1210086D96E /* R.generated.swift */; };
 		FD341DB32157D37600FEA928 /* UBSSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */; };
 		FD341DB52157DC9100FEA928 /* UBSAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */; };
 		FDA7E8552159C18100BBA355 /* MedicineReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E8542159C18100BBA355 /* MedicineReservationViewController.swift */; };
@@ -54,6 +55,7 @@
 		720152D7F3435B90B3664E65 /* Pods_kdRemedioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kdRemedioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		964AA3AD3297EB86FA193050 /* Pods_kdRemedio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kdRemedio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCF7D6D320631B5659AFDED /* Pods-kdRemedio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedio.release.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio.release.xcconfig"; sourceTree = "<group>"; };
+		FD274B7B215DB1210086D96E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSSelectionTableViewController.swift; sourceTree = "<group>"; };
 		FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSAnnotation.swift; sourceTree = "<group>"; };
 		FDA7E8542159C18100BBA355 /* MedicineReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineReservationViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		FDB51A4721531F0A0083A6EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FD274B7B215DB1210086D96E /* R.generated.swift */,
 				FDB51A4A215327A30083A6EA /* healthtap_spinner.json */,
 				FDAB6185214B2FD300A1C01A /* AppDelegate.swift */,
 				FDAB618C214B2FD500A1C01A /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			buildConfigurationList = FDAB619F214B2FD500A1C01A /* Build configuration list for PBXNativeTarget "kdRemedio" */;
 			buildPhases = (
 				246119908FF18FED36848E69 /* [CP] Check Pods Manifest.lock */,
+				FD274B7A215DB0850086D96E /* ShellScript */,
 				FDAB617E214B2FD300A1C01A /* Sources */,
 				FDAB617F214B2FD300A1C01A /* Frameworks */,
 				FDAB6180214B2FD300A1C01A /* Resources */,
@@ -368,12 +372,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-kdRemedio/Pods-kdRemedio-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +423,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FD274B7A215DB0850086D96E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -433,6 +456,7 @@
 				FDF6C88F21545F74004A5D64 /* Notification.swift in Sources */,
 				FDAB61A6214B313400A1C01A /* MedicineFinderTableViewController.swift in Sources */,
 				FDAB61B4214B3AA200A1C01A /* Medicine.swift in Sources */,
+				FD274B7C215DB1210086D96E /* R.generated.swift in Sources */,
 				FDAB61AA214B3A4F00A1C01A /* json.swift in Sources */,
 				FDAB61BB214B45B700A1C01A /* UBSSelectionCell.swift in Sources */,
 				FDAB61B9214B444100A1C01A /* UbsManager.swift in Sources */,

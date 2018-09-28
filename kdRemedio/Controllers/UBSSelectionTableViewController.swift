@@ -23,9 +23,8 @@ class UBSSelectionTableViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    guard let ubs = ubs else { return }
+    guard let viewController = R.storyboard.main.reservation(), let ubs = ubs else { return }
     let medicine = ubs.medicines[indexPath.row]
-    let viewController = storyboard?.instantiateViewController(withIdentifier: "reservation") as! MedicineReservationViewController
     viewController.ubsMedicine = UbsMedicine(medicine: medicine, ubs: ubs)
     viewController.navigationItem.title = "Selecione a quantidade desejada"
     navigationController?.pushViewController(viewController, animated: true)
