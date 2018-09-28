@@ -2,6 +2,7 @@ import Foundation
 import MapKit
 
 class UBSList: Decodable {
+
 	var list: [UBS] = []
 
   init(list: [UBS]) {
@@ -29,12 +30,12 @@ class UBSList: Decodable {
       allMedicines.append(contentsOf: ubs.medicines)
     }
 
-    var setMedicines: Set<String> = []
+    var setOfMedicines: Set<String> = []
     allMedicines.forEach { medicine in
-      setMedicines.insert(medicine.name)
+      setOfMedicines.insert(medicine.name)
     }
 
-    return setMedicines.filter { word -> Bool in
+    return setOfMedicines.filter { word -> Bool in
       return word.contains(letters)
     }
   }

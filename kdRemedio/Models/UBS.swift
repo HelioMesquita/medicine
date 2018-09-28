@@ -40,12 +40,12 @@ class UBS: Decodable {
   }
 
   func updateDistance(location: CLLocation) {
-    let distance = location.distance(from: self.coordinate) as Double
-    let number = NSNumber(value: distance/1000)
+    let distanceInMeters = location.distance(from: self.coordinate) as Double
+    let distanceInKilometers = NSNumber(value: distanceInMeters/1000)
     let formatNumber = NumberFormatter()
     formatNumber.maximumFractionDigits = 2
     formatNumber.minimumIntegerDigits = 1
     formatNumber.locale = Locale(identifier: "pt_BR")
-    self.distance = formatNumber.string(from: number)
+    self.distance = formatNumber.string(from: distanceInKilometers)
   }
 }
