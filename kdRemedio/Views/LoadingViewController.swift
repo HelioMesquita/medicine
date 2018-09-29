@@ -6,7 +6,7 @@ class LoadingViewController: UIViewController {
   private let window = LoadingWindow()
 
   required init?(coder aDecoder: NSCoder) {
-    fatalError()
+    fatalError("Wrong call")
   }
 
   init() {
@@ -36,7 +36,6 @@ class LoadingViewController: UIViewController {
       return view is LOTAnimationView
       } as? LOTAnimationView
   }
-
 
   override func loadView() {
     let view = UIView(frame: UIScreen.main.bounds)

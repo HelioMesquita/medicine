@@ -1,5 +1,5 @@
-import UIKit
 import MapKit
+import UIKit
 
 class MapViewController: UIViewController {
 
@@ -81,7 +81,7 @@ extension MapViewController: MapViewHandlable {
   }
 
   func setMapLocation(region: CLLocation) {
-    let viewRegion = MKCoordinateRegion.init(center: region.coordinate, latitudinalMeters: 6000, longitudinalMeters: 6000)
+    let viewRegion = MKCoordinateRegion(center: region.coordinate, latitudinalMeters: 6000, longitudinalMeters: 6000)
     mapView?.setRegion(viewRegion, animated: true)
   }
 

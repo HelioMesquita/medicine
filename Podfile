@@ -13,6 +13,7 @@ target 'kdRemedio' do
   pod 'PromiseKit/Alamofire'
   pod 'lottie-ios'
   pod 'R.swift'
+  pod 'SwiftLint'
 
   # Pods for kdRemedio
 

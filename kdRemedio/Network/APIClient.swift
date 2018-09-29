@@ -1,6 +1,6 @@
+import Alamofire
 import Foundation
 import PromiseKit
-import Alamofire
 
 class APIClient<T> where T: Decodable {
   let url: URL

@@ -12,6 +12,7 @@
 		FD274B7C215DB1210086D96E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD274B7B215DB1210086D96E /* R.generated.swift */; };
 		FD341DB32157D37600FEA928 /* UBSSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */; };
 		FD341DB52157DC9100FEA928 /* UBSAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */; };
+		FD48055E215EF89E0062D0C8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FD48055D215EF89E0062D0C8 /* .swiftlint.yml */; };
 		FDA7E8552159C18100BBA355 /* MedicineReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E8542159C18100BBA355 /* MedicineReservationViewController.swift */; };
 		FDAB6186214B2FD300A1C01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB6185214B2FD300A1C01A /* AppDelegate.swift */; };
 		FDAB6188214B2FD300A1C01A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB6187214B2FD300A1C01A /* MapViewController.swift */; };
@@ -58,6 +59,7 @@
 		FD274B7B215DB1210086D96E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		FD341DB22157D37600FEA928 /* UBSSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSSelectionTableViewController.swift; sourceTree = "<group>"; };
 		FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSAnnotation.swift; sourceTree = "<group>"; };
+		FD48055D215EF89E0062D0C8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		FDA7E8542159C18100BBA355 /* MedicineReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineReservationViewController.swift; sourceTree = "<group>"; };
 		FDAB6182214B2FD300A1C01A /* kdRemedio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kdRemedio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAB6185214B2FD300A1C01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,7 +160,7 @@
 				FDAB61AB214B3A9800A1C01A /* Models */,
 				FDF6C89121546AB9004A5D64 /* Network */,
 				FDB51A4621531F030083A6EA /* Storyboard */,
-				FDB51A4721531F0A0083A6EA /* Supporting Files */,
+				FDB51A4721531F0A0083A6EA /* SupportingFiles */,
 				FDB51A4521531EFD0083A6EA /* Views */,
 			);
 			path = kdRemedio;
@@ -219,7 +221,7 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		FDB51A4721531F0A0083A6EA /* Supporting Files */ = {
+		FDB51A4721531F0A0083A6EA /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				FD274B7B215DB1210086D96E /* R.generated.swift */,
@@ -229,8 +231,9 @@
 				FDAB61A7214B32AA00A1C01A /* Colors.xcassets */,
 				FDAB6191214B2FD500A1C01A /* Info.plist */,
 				FDAB61A9214B3A4F00A1C01A /* json.swift */,
+				FD48055D215EF89E0062D0C8 /* .swiftlint.yml */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		FDF6C88D21545F63004A5D64 /* Extension */ = {
@@ -345,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD48055E215EF89E0062D0C8 /* .swiftlint.yml in Resources */,
 				FDAB6190214B2FD500A1C01A /* LaunchScreen.storyboard in Resources */,
 				FDAB61A8214B32AA00A1C01A /* Colors.xcassets in Resources */,
 				FDAB618D214B2FD500A1C01A /* Assets.xcassets in Resources */,
@@ -434,7 +438,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n\"${PODS_ROOT}/SwiftLint/swiftlint\" --config kdRemedio/SupportingFiles/.swiftlint.yml\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -627,7 +631,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJ3PM54JPR;
-				INFOPLIST_FILE = "$(SRCROOT)/kdRemedio/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/kdRemedio/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -646,7 +650,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJ3PM54JPR;
-				INFOPLIST_FILE = "$(SRCROOT)/kdRemedio/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/kdRemedio/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
