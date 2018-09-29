@@ -35,6 +35,6 @@ extension MedicineFinderTableViewController: UISearchResultsUpdating {
 
   func updateSearchResults(for searchController: UISearchController) {
     guard let searchBarText = searchController.searchBar.text else { return }
-    medicines = UbsManager.getList().medicinesNameWhere(contains: searchBarText)
+    medicines = UBSManager.getList().medicinesNameWhere(contains: searchBarText)
   }
 }

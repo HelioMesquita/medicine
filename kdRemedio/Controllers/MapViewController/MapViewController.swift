@@ -94,7 +94,7 @@ extension MapViewController: MedicineFinderHandable {
 
   func presentUBSMedicineSelection(with medicineName: String) {
     guard let ubsMedicineSelectionVC = R.storyboard.main.ubsSelection() else { return }
-    let list = UbsManager.getList().ubsWithMedicineWhere(contains: medicineName)
+    let list = UBSManager.getList().ubsWithMedicineWhere(contains: medicineName)
     ubsMedicineSelectionVC.list = list
     ubsMedicineSelectionVC.navigationItem.title = medicineName
     navigationController?.pushViewController(ubsMedicineSelectionVC, animated: true)

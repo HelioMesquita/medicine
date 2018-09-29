@@ -1,8 +1,8 @@
 import Foundation
 
-class UbsManager {
+class UBSManager {
 
-  private static var instance = UbsManager()
+  private static var instance = UBSManager()
   private var list: UBSList = UBSList(list: [])
 
   static func setList(list: UBSList) {

@@ -34,7 +34,7 @@ class MapViewPresenter {
       self.makeRequest(location: location)
     }.done { ubslist in
       self.delegate?.setMapAnnotations(annotations: ubslist.getAnnotations())
-      UbsManager.setList(list: ubslist)
+      UBSManager.setList(list: ubslist)
     }.catch { error in
       self.delegate?.showAlertError(error: error)
     }.finally {
