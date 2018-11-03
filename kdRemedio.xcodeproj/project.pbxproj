@@ -224,14 +224,14 @@
 		FDB51A4721531F0A0083A6EA /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				FD274B7B215DB1210086D96E /* R.generated.swift */,
-				FDB51A4A215327A30083A6EA /* healthtap_spinner.json */,
+				FD48055D215EF89E0062D0C8 /* .swiftlint.yml */,
 				FDAB6185214B2FD300A1C01A /* AppDelegate.swift */,
 				FDAB618C214B2FD500A1C01A /* Assets.xcassets */,
 				FDAB61A7214B32AA00A1C01A /* Colors.xcassets */,
+				FDB51A4A215327A30083A6EA /* healthtap_spinner.json */,
 				FDAB6191214B2FD500A1C01A /* Info.plist */,
 				FDAB61A9214B3A4F00A1C01A /* json.swift */,
-				FD48055D215EF89E0062D0C8 /* .swiftlint.yml */,
+				FD274B7B215DB1210086D96E /* R.generated.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -630,13 +630,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				DEVELOPMENT_TEAM = LMS2232J28;
 				INFOPLIST_FILE = "$(SRCROOT)/kdRemedio/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio;
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -649,13 +649,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XJ3PM54JPR;
+				DEVELOPMENT_TEAM = LMS2232J28;
 				INFOPLIST_FILE = "$(SRCROOT)/kdRemedio/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio;
+				PRODUCT_BUNDLE_IDENTIFIER = callidus.kdRemedio2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

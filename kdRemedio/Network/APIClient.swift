@@ -9,7 +9,7 @@ class APIClient<T> where T: Decodable {
     self.url = url
   }
 
-  func fetch(parameters: [String: Any]) -> Promise<T> {
+  func fetch(parameters: [String: Any]? = nil) -> Promise<T> {
     return Alamofire.request(url, parameters: parameters).responseDecodable(T.self)
   }
 }

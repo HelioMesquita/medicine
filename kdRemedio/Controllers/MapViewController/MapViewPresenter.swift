@@ -27,38 +27,32 @@ class MapViewPresenter {
     firstly {
       showLoading()
     }.then {
-      CLLocationManager.requestLocation()
-    }.firstValue.get { region in
-      self.delegate?.setMapLocation(region: region)
-    }.then { location in
-      self.makeRequest(location: location)
-    }.done { ubslist in
-      self.delegate?.setMapAnnotations(annotations: ubslist.getAnnotations())
-      UBSManager.setList(list: ubslist)
+      when(fulfilled: self.getLocation(), self.makeRequest())
+    }.done { location, ubsList in
+      ubsList.update(location: location)
+      self.delegate?.setMapLocation(region: location)
+      self.delegate?.setMapAnnotations(annotations: ubsList.getAnnotations())
+      UBSManager.setList(list: ubsList)
     }.catch { error in
       self.delegate?.showAlertError(error: error)
     }.finally {
-      DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
+      DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
         NotificationCenter.default.post(name: .removeLoadingViewController, object: nil, userInfo: nil)
-      })
+      }
     }
   }
 
-  func showLoading() -> Guarantee<Void> {
+  private func showLoading() -> Guarantee<Void> {
     _ = LoadingViewController()
     return Guarantee<Void>()
   }
 
-  private func makeRequest(location: CLLocation?) -> Promise<UBSList> {
-    return Promise { seal in
-      let data = json.data(using: .utf8)!
-      do {
-        let ubsList = try JSONDecoder().decode(UBSList.self, from: data)
-        ubsList.update(location: location)
-        seal.fulfill(ubsList)
-      } catch {
-        seal.reject(error)
-      }
-    }
+  private func makeRequest() -> Promise<UBSList> {
+    let url = URL(string: "http://www.caderemedio.esy.es/controller.php?class=Consulta&action=buscarRemedio")!
+    return APIClient<UBSList>(url: url).fetch()
+  }
+
+  private func getLocation() -> Promise<CLLocation> {
+      return CLLocationManager.requestLocation().firstValue
   }
 }

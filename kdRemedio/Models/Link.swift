@@ -1,6 +1,6 @@
 import Foundation
 
 struct Link: Decodable {
-	let url: URL
+	let url: String
 	let method: String?
 }
