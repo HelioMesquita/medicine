@@ -1,25 +1,31 @@
 import Foundation
 import PromiseKit
 
-protocol MapViewHandlable: class {
+protocol HomeMapViewPresentable: class {
   func configureSearchBar()
+
   func configureMapView()
-  func showAlertError(error: Error)
   func setMapLocation(region: CLLocation)
   func setMapAnnotations(annotations: [MKPointAnnotation])
+
+  func showLoadError(error: Error)
+
+  func openHistoric()
+  func showCPFInsertAlert()
+  func showCPFInvalidAlert()
 }
 
-class MapViewPresenter {
+class HomeMapViewPresenter {
 
-  weak var delegate: MapViewHandlable?
+  weak var view: HomeMapViewPresentable?
 
-  init(delegate: MapViewHandlable) {
-    self.delegate = delegate
+  init(view: HomeMapViewPresentable) {
+    self.view = view
   }
 
   func viewDidLoad() {
-    delegate?.configureSearchBar()
-    delegate?.configureMapView()
+    view?.configureSearchBar()
+    view?.configureMapView()
     load()
   }
 
@@ -27,18 +33,35 @@ class MapViewPresenter {
     firstly {
       showLoading()
     }.then {
-      when(fulfilled: self.getLocation(), self.makeRequest())
+      when(fulfilled: self.getLocation(), self.performRequest())
     }.done { location, ubsList in
       ubsList.update(location: location)
-      self.delegate?.setMapLocation(region: location)
-      self.delegate?.setMapAnnotations(annotations: ubsList.getAnnotations())
+      self.view?.setMapLocation(region: location)
+      self.view?.setMapAnnotations(annotations: ubsList.getAnnotations())
       UBSManager.setList(list: ubsList)
     }.catch { error in
-      self.delegate?.showAlertError(error: error)
+      self.view?.showLoadError(error: error)
     }.finally {
       DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
         NotificationCenter.default.post(name: .removeLoadingViewController, object: nil, userInfo: nil)
       }
+    }
+  }
+
+  func historicClicked() {
+    if UserDefaults.standard.string(forKey: "cpf") != nil {
+      view?.openHistoric()
+    } else {
+      view?.showCPFInsertAlert()
+    }
+  }
+
+  func handleCPF(cpf: String) {
+    if cpf.count >= 10 {
+      UserDefaults.standard.set(cpf, forKey: "cpf")
+      view?.openHistoric()
+    } else {
+      view?.showCPFInvalidAlert()
     }
   }
 
@@ -47,7 +70,7 @@ class MapViewPresenter {
     return Guarantee<Void>()
   }
 
-  private func makeRequest() -> Promise<UBSList> {
+  private func performRequest() -> Promise<UBSList> {
     let url = URL(string: "http://www.caderemedio.esy.es/controller.php?class=Consulta&action=buscarRemedio")!
     return APIClient<UBSList>(url: url).fetch()
   }

@@ -183,13 +183,18 @@ struct _R: Rswift.Validatable {
       typealias InitialController = UIKit.UINavigationController
       
       let bundle = R.hostingBundle
-      let medicineFinder = StoryboardViewControllerResource<MedicineFinderTableViewController>(identifier: "medicineFinder")
+      let historic = StoryboardViewControllerResource<HistoricTableViewController>(identifier: "historic")
+      let medicineFinder = StoryboardViewControllerResource<MedicineSearchTableViewController>(identifier: "medicineFinder")
       let medicineSelection = StoryboardViewControllerResource<UBSSelectionTableViewController>(identifier: "medicineSelection")
       let name = "Main"
-      let reservation = StoryboardViewControllerResource<MedicineReservationViewController>(identifier: "reservation")
+      let reservation = StoryboardViewControllerResource<ReservationViewController>(identifier: "reservation")
       let ubsSelection = StoryboardViewControllerResource<UBSMedicineSelectionTableViewController>(identifier: "ubsSelection")
       
-      func medicineFinder(_: Void = ()) -> MedicineFinderTableViewController? {
+      func historic(_: Void = ()) -> HistoricTableViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: historic)
+      }
+      
+      func medicineFinder(_: Void = ()) -> MedicineSearchTableViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: medicineFinder)
       }
       
@@ -197,7 +202,7 @@ struct _R: Rswift.Validatable {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: medicineSelection)
       }
       
-      func reservation(_: Void = ()) -> MedicineReservationViewController? {
+      func reservation(_: Void = ()) -> ReservationViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: reservation)
       }
       
@@ -206,9 +211,10 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if _R.storyboard.main().medicineFinder() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'medicineFinder' could not be loaded from storyboard 'Main' as 'MedicineFinderTableViewController'.") }
-        if _R.storyboard.main().reservation() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'reservation' could not be loaded from storyboard 'Main' as 'MedicineReservationViewController'.") }
+        if _R.storyboard.main().medicineFinder() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'medicineFinder' could not be loaded from storyboard 'Main' as 'MedicineSearchTableViewController'.") }
+        if _R.storyboard.main().reservation() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'reservation' could not be loaded from storyboard 'Main' as 'ReservationViewController'.") }
         if _R.storyboard.main().medicineSelection() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'medicineSelection' could not be loaded from storyboard 'Main' as 'UBSSelectionTableViewController'.") }
+        if _R.storyboard.main().historic() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'historic' could not be loaded from storyboard 'Main' as 'HistoricTableViewController'.") }
         if _R.storyboard.main().ubsSelection() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'ubsSelection' could not be loaded from storyboard 'Main' as 'UBSMedicineSelectionTableViewController'.") }
       }
       
