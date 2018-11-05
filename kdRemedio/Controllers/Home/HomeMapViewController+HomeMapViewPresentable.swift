@@ -8,20 +8,23 @@ extension HomeMapViewController: HomeMapViewPresentable {
     navigationController?.pushViewController(historic, animated: true)
   }
 
-  func showCPFInvalidAlert() {
+  func showInvaliDocumentdAlert() {
     let alert = UIAlertController(title: "Alerta", message: "CPF inválido", preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
     present(alert, animated: true, completion: nil)
   }
 
-  func showCPFInsertAlert() {
+  func showInsertDocumentAlert() {
     let alert = UIAlertController(title: "Digite o seu CPF", message: nil, preferredStyle: .alert)
-    alert.addTextField(configurationHandler: nil)
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] _ in
-      if let cpf = alert?.textFields?.first?.text {
-        self.presenter.handleCPF(cpf: cpf)
+    let action1 = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
+    let action2 = UIAlertAction(title: "OK", style: .default, handler: { [weak alert] _ in
+      if let document = alert?.textFields?.first?.text {
+        self.presenter.handleDocument(document: document)
       }
-    }))
+    })
+    alert.addTextField(configurationHandler: nil)
+    alert.addAction(action1)
+    alert.addAction(action2)
     present(alert, animated: true, completion: nil)
   }
 

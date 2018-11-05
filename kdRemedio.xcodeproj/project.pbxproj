@@ -43,6 +43,7 @@
 		FDB51A4B215327A30083A6EA /* healthtap_spinner.json in Resources */ = {isa = PBXBuildFile; fileRef = FDB51A4A215327A30083A6EA /* healthtap_spinner.json */; };
 		FDD99258218E6631004B7FF3 /* Historic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD99257218E6631004B7FF3 /* Historic.swift */; };
 		FDD9925A218E6B63004B7FF3 /* HistoricTableViewController+HistoricPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD99259218E6B63004B7FF3 /* HistoricTableViewController+HistoricPresentable.swift */; };
+		FDD9925C2190E091004B7FF3 /* PersonalDocumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD9925B2190E091004B7FF3 /* PersonalDocumentManager.swift */; };
 		FDF6C88F21545F74004A5D64 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6C88E21545F74004A5D64 /* Notification.swift */; };
 		FDF6C89321546AC5004A5D64 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6C89221546AC5004A5D64 /* APIClient.swift */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,7 @@
 		FDB51A4A215327A30083A6EA /* healthtap_spinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = healthtap_spinner.json; sourceTree = "<group>"; };
 		FDD99257218E6631004B7FF3 /* Historic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historic.swift; sourceTree = "<group>"; };
 		FDD99259218E6B63004B7FF3 /* HistoricTableViewController+HistoricPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoricTableViewController+HistoricPresentable.swift"; sourceTree = "<group>"; };
+		FDD9925B2190E091004B7FF3 /* PersonalDocumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDocumentManager.swift; sourceTree = "<group>"; };
 		FDF6C88E21545F74004A5D64 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		FDF6C89221546AC5004A5D64 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		FE6B737F7A2DD56878F77E93 /* Pods-kdRemedioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedioTests/Pods-kdRemedioTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				FDAB6191214B2FD500A1C01A /* Info.plist */,
 				FDAB61A9214B3A4F00A1C01A /* json.swift */,
 				FD274B7B215DB1210086D96E /* R.generated.swift */,
+				FDD9925B2190E091004B7FF3 /* PersonalDocumentManager.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				FDAB61BB214B45B700A1C01A /* UBSSelectionCell.swift in Sources */,
 				FD1E52A2218E6147009091D9 /* HomeMapViewController.swift in Sources */,
 				FDAB61B9214B444100A1C01A /* UBSManager.swift in Sources */,
+				FDD9925C2190E091004B7FF3 /* PersonalDocumentManager.swift in Sources */,
 				FD341DB52157DC9100FEA928 /* UBSAnnotation.swift in Sources */,
 				FDB51A43215318D50083A6EA /* UbsMedicine.swift in Sources */,
 				FD1E5291218E454C009091D9 /* ReservationPresenter.swift in Sources */,

@@ -8,12 +8,28 @@ extension HistoricTableViewController: HistoricPresentable {
 
   func showLoadError(error: Error) {
     let alert = UIAlertController(title: "Alerta", message: "Ocorreu um erro \(error.localizedDescription)", preferredStyle: .alert)
-    let action = UIAlertAction(title: "Tentar novamente", style: .default, handler: { _ in self.presenter.load() })
-    alert.addAction(action)
+    let action1 = UIAlertAction(title: "Tentar novamente", style: .default, handler: { _ in self.presenter.load() })
+    let action2 = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
+    alert.addAction(action1)
+    alert.addAction(action2)
     present(alert, animated: true, completion: nil)
   }
 
   func configureNavigation() {
+    let navigationItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(showAlertRemoveDocument))
+    self.navigationItem.setRightBarButtonItems([navigationItem], animated: true)
     navigationItem.title = "Histórico"
+  }
+
+  @objc func showAlertRemoveDocument() {
+    let alert = UIAlertController(title: "Você deseja remover o CPF salvo?", message: "", preferredStyle: .alert)
+    let action1 = UIAlertAction(title: "Não", style: .default, handler: nil)
+    let action2 = UIAlertAction(title: "Sim", style: .destructive, handler: { _ in
+      self.presenter.removeDocument()
+      self.navigationController?.popViewController(animated: true)
+    })
+    alert.addAction(action1)
+    alert.addAction(action2)
+    present(alert, animated: true, completion: nil)
   }
 }

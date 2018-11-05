@@ -10,9 +10,11 @@ protocol HistoricPresentable: class {
 class HistoricPresenter {
 
   weak var view: HistoricPresentable?
+  let document: PersonalDocumentManager
 
-  init(view: HistoricPresentable) {
+  init(view: HistoricPresentable, document: PersonalDocumentManager = PersonalDocumentManager()) {
     self.view = view
+    self.document = document
   }
 
   func viewDidLoad() {
@@ -36,14 +38,17 @@ class HistoricPresenter {
     }
   }
 
+  func removeDocument() {
+    document.remove()
+  }
+
   private func showLoading() -> Guarantee<Void> {
     _ = LoadingViewController()
     return Guarantee<Void>()
   }
 
   private func performRequest() -> Promise<[Historic]> {
-    let cpf = UserDefaults.standard.string(forKey: "cpf")!
-    let link = "http://www.caderemedio.esy.es/controller.php?class=Reserva&action=buscarReserva&cpf=" + cpf
+    let link = "http://www.caderemedio.esy.es/controller.php?class=Reserva&action=buscarReserva&cpf=" + document.get()!
     let url = URL(string: link)!
     return APIClient<[Historic]>(url: url).fetch()
   }

@@ -11,16 +11,18 @@ protocol HomeMapViewPresentable: class {
   func showLoadError(error: Error)
 
   func openHistoric()
-  func showCPFInsertAlert()
-  func showCPFInvalidAlert()
+  func showInsertDocumentAlert()
+  func showInvaliDocumentdAlert()
 }
 
 class HomeMapViewPresenter {
 
   weak var view: HomeMapViewPresentable?
+  let document: PersonalDocumentManager
 
-  init(view: HomeMapViewPresentable) {
+  init(view: HomeMapViewPresentable, document: PersonalDocumentManager = PersonalDocumentManager()) {
     self.view = view
+    self.document = document
   }
 
   func viewDidLoad() {
@@ -49,19 +51,19 @@ class HomeMapViewPresenter {
   }
 
   func historicClicked() {
-    if UserDefaults.standard.string(forKey: "cpf") != nil {
+    if document.hasDocument {
       view?.openHistoric()
     } else {
-      view?.showCPFInsertAlert()
+      view?.showInsertDocumentAlert()
     }
   }
 
-  func handleCPF(cpf: String) {
-    if cpf.count >= 10 {
-      UserDefaults.standard.set(cpf, forKey: "cpf")
+  func handleDocument(document: String) {
+    if self.document.isValid(document: document) {
+      self.document.save(document: document)
       view?.openHistoric()
     } else {
-      view?.showCPFInvalidAlert()
+      view?.showInvaliDocumentdAlert()
     }
   }
 
