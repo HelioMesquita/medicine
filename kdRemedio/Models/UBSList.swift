@@ -19,9 +19,7 @@ class UBSList: Decodable {
   }
 
   func getAnnotations() -> [UBSAnnotation] {
-    return list.map { ubs -> UBSAnnotation in
-      return ubs.annotation
-    }
+    return list.map { $0.annotation }
   }
 
   func medicinesNameWhere(contains letters: String) -> [String] {
@@ -44,9 +42,7 @@ class UBSList: Decodable {
     var ubsMedicineList: [UbsMedicine] = []
 
     list.forEach { (ubs) in
-      let medicine = ubs.medicines.first(where: { (medicine) -> Bool in
-        return medicine.name == medicineName
-      })
+      let medicine = ubs.medicines.first(where: { $0.name == medicineName })
 
       if let medicine = medicine {
         ubsMedicineList.append(UbsMedicine(medicine: medicine, ubs: ubs))

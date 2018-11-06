@@ -33,11 +33,12 @@ extension HomeMapViewController: HomeMapViewPresentable {
   }
 
   func configureSearchBar() {
-    let medicineFinderViewController = R.storyboard.main.medicineFinder()
-    medicineFinderViewController?.delegate = self
+    let medicineSearchViewController = R.storyboard.main.medicineSearch()
+    medicineSearchViewController?.list = ubsList
+    medicineSearchViewController?.delegate = self
 
-    resultSearchController = UISearchController(searchResultsController: medicineFinderViewController)
-    resultSearchController.searchResultsUpdater = medicineFinderViewController
+    resultSearchController = UISearchController(searchResultsController: medicineSearchViewController)
+    resultSearchController.searchResultsUpdater = medicineSearchViewController
     resultSearchController.obscuresBackgroundDuringPresentation = false
     resultSearchController.hidesNavigationBarDuringPresentation = false
     resultSearchController.dimsBackgroundDuringPresentation = true
@@ -74,7 +75,7 @@ extension HomeMapViewController: MedicineSearchHandable {
 
   func presentUBSMedicineSelection(with medicineName: String) {
     guard let ubsMedicineSelectionVC = R.storyboard.main.ubsSelection() else { return }
-    let list = UBSManager.getList().ubsWithMedicineWhere(contains: medicineName)
+    let list = self.ubsList.ubsWithMedicineWhere(contains: medicineName)
     ubsMedicineSelectionVC.list = list
     ubsMedicineSelectionVC.navigationItem.title = medicineName
     navigationController?.pushViewController(ubsMedicineSelectionVC, animated: true)

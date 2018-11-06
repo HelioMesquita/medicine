@@ -6,6 +6,7 @@ protocol MedicineSearchHandable: class {
 
 class MedicineSearchTableViewController: UITableViewController {
 
+  var list: UBSList = UBSList(list: [])
   var medicines: [String] = [] {
     didSet {
       self.tableView.reloadData()
@@ -35,6 +36,6 @@ extension MedicineSearchTableViewController: UISearchResultsUpdating {
 
   func updateSearchResults(for searchController: UISearchController) {
     guard let searchBarText = searchController.searchBar.text else { return }
-    medicines = UBSManager.getList().medicinesNameWhere(contains: searchBarText)
+    medicines = list.medicinesNameWhere(contains: searchBarText)
   }
 }

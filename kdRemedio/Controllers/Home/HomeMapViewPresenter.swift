@@ -2,6 +2,9 @@ import Foundation
 import PromiseKit
 
 protocol HomeMapViewPresentable: class {
+
+  var ubsList: UBSList { get set }
+
   func configureSearchBar()
 
   func configureMapView()
@@ -38,9 +41,9 @@ class HomeMapViewPresenter {
       when(fulfilled: self.getLocation(), self.performRequest())
     }.done { location, ubsList in
       ubsList.update(location: location)
+      self.view?.ubsList.list.append(contentsOf: ubsList.list) 
       self.view?.setMapLocation(region: location)
       self.view?.setMapAnnotations(annotations: ubsList.getAnnotations())
-      UBSManager.setList(list: ubsList)
     }.catch { error in
       self.view?.showLoadError(error: error)
     }.finally {

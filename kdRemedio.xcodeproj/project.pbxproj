@@ -35,7 +35,6 @@
 		FDAB61B5214B3AA200A1C01A /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61AF214B3AA200A1C01A /* Links.swift */; };
 		FDAB61B6214B3AA200A1C01A /* UBSList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B0214B3AA200A1C01A /* UBSList.swift */; };
 		FDAB61B7214B3AA200A1C01A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B1214B3AA200A1C01A /* Link.swift */; };
-		FDAB61B9214B444100A1C01A /* UBSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61B8214B444100A1C01A /* UBSManager.swift */; };
 		FDAB61BB214B45B700A1C01A /* UBSSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BA214B45B700A1C01A /* UBSSelectionCell.swift */; };
 		FDAB61BD214EB94800A1C01A /* UBSMedicineSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB61BC214EB94800A1C01A /* UBSMedicineSelectionTableViewController.swift */; };
 		FDB51A43215318D50083A6EA /* UbsMedicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB51A42215318D50083A6EA /* UbsMedicine.swift */; };
@@ -94,7 +93,6 @@
 		FDAB61AF214B3AA200A1C01A /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		FDAB61B0214B3AA200A1C01A /* UBSList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBSList.swift; sourceTree = "<group>"; };
 		FDAB61B1214B3AA200A1C01A /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
-		FDAB61B8214B444100A1C01A /* UBSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSManager.swift; sourceTree = "<group>"; };
 		FDAB61BA214B45B700A1C01A /* UBSSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSSelectionCell.swift; sourceTree = "<group>"; };
 		FDAB61BC214EB94800A1C01A /* UBSMedicineSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBSMedicineSelectionTableViewController.swift; sourceTree = "<group>"; };
 		FDB51A42215318D50083A6EA /* UbsMedicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbsMedicine.swift; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 		FDAB61AB214B3A9800A1C01A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FDAB61B8214B444100A1C01A /* UBSManager.swift */,
 				FDAB61B0214B3AA200A1C01A /* UBSList.swift */,
 				FD341DB42157DC9100FEA928 /* UBSAnnotation.swift */,
 				FDAB61AC214B3AA100A1C01A /* UBS.swift */,
@@ -528,7 +525,6 @@
 				FDAB61AA214B3A4F00A1C01A /* json.swift in Sources */,
 				FDAB61BB214B45B700A1C01A /* UBSSelectionCell.swift in Sources */,
 				FD1E52A2218E6147009091D9 /* HomeMapViewController.swift in Sources */,
-				FDAB61B9214B444100A1C01A /* UBSManager.swift in Sources */,
 				FDD9925C2190E091004B7FF3 /* PersonalDocumentManager.swift in Sources */,
 				FD341DB52157DC9100FEA928 /* UBSAnnotation.swift in Sources */,
 				FDB51A43215318D50083A6EA /* UbsMedicine.swift in Sources */,

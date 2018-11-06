@@ -5,6 +5,7 @@ class HomeMapViewController: UIViewController {
 
   var resultSearchController: UISearchController = UISearchController(searchResultsController: nil)
   lazy var presenter: HomeMapViewPresenter = HomeMapViewPresenter(view: self)
+  var ubsList: UBSList = UBSList(list: [])
 
   @IBOutlet weak var mapView: MKMapView?
 
