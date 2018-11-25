@@ -5,9 +5,17 @@ class UbsMedicine {
   let address: String
   let googleMaps: URL
   let medicine: Medicine?
-  var distance: String?
+  var distance: String
 
-  init(name: String, address: String, googleMaps: URL, medicine: Medicine, distance: String?) {
+  var distanceNumber: Double {
+    let formatNumber = NumberFormatter()
+    formatNumber.maximumFractionDigits = 2
+    formatNumber.minimumIntegerDigits = 1
+    formatNumber.locale = Locale(identifier: "pt_BR")
+    return formatNumber.number(from: distance)?.doubleValue ?? 0
+  }
+
+  init(name: String, address: String, googleMaps: URL, medicine: Medicine, distance: String) {
     self.name = name
     self.address = address
     self.googleMaps = googleMaps

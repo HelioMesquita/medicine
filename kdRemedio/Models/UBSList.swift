@@ -42,13 +42,12 @@ class UBSList: Decodable {
     var ubsMedicineList: [UbsMedicine] = []
 
     list.forEach { (ubs) in
-      let medicine = ubs.medicines.first(where: { $0.name == medicineName })
-
-      if let medicine = medicine {
+      if let medicine = ubs.medicines.first(where: { $0.name == medicineName }) {
         ubsMedicineList.append(UbsMedicine(medicine: medicine, ubs: ubs))
       }
     }
 
+    ubsMedicineList.sort(by: { $0.distanceNumber < $1.distanceNumber })
     return ubsMedicineList
   }
 }

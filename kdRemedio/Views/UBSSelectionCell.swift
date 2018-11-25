@@ -10,9 +10,7 @@ class UBSSelectionCell: UITableViewCell {
   func setCell(ubsMedicine: UbsMedicine) {
     address?.text = ubsMedicine.address
     name?.text = ubsMedicine.name
-    if let distance = ubsMedicine.distance {
-      self.distance?.text = "\(distance) km"
-    }
+    distance?.text = "\(ubsMedicine.distance) km"
     if let available = ubsMedicine.medicine?.available {
       self.available?.text = "\(available) unidades"
     }

@@ -16,8 +16,8 @@ extension HistoricTableViewController: HistoricPresentable {
   }
 
   func configureNavigation() {
-    let navigationItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(showAlertRemoveDocument))
-    self.navigationItem.setRightBarButtonItems([navigationItem], animated: true)
+    let item = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(showAlertRemoveDocument))
+    self.navigationItem.setRightBarButtonItems([item], animated: true)
     navigationItem.title = "Histórico"
   }
 

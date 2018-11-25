@@ -41,7 +41,7 @@ class HomeMapViewPresenter {
       when(fulfilled: self.getLocation(), self.performRequest())
     }.done { location, ubsList in
       ubsList.update(location: location)
-      self.view?.ubsList.list.append(contentsOf: ubsList.list) 
+      self.view?.ubsList.list.append(contentsOf: ubsList.list)
       self.view?.setMapLocation(region: location)
       self.view?.setMapAnnotations(annotations: ubsList.getAnnotations())
     }.catch { error in

@@ -8,7 +8,7 @@ class UBS: Decodable {
 	let address: String
 	let googleMaps: URL
 	let medicines: [Medicine]
-  var distance: String? = ""
+  var distance: String = ""
 
   init(name: String, address: String, googleMaps: URL, coordinateModel: Coordinate, medicines: [Medicine], distance: String) {
     self.name = name
@@ -36,7 +36,7 @@ class UBS: Decodable {
   }
 
   var headerTitle: String {
-    return "A distância de \(distance ?? "") km"
+    return "A distância de \(distance) km"
   }
 
   func updateDistance(location: CLLocation) {
@@ -46,6 +46,6 @@ class UBS: Decodable {
     formatNumber.maximumFractionDigits = 2
     formatNumber.minimumIntegerDigits = 1
     formatNumber.locale = Locale(identifier: "pt_BR")
-    self.distance = formatNumber.string(from: distanceInKilometers)
+    self.distance = formatNumber.string(from: distanceInKilometers) ?? ""
   }
 }

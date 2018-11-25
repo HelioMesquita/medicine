@@ -25,6 +25,7 @@ class ReservationViewController: UITableViewController {
     presenter.viewDidLoad()
     openMapButton?.addTarget(self, action: #selector(openMap), for: .touchUpInside)
     reserveButton?.addTarget(self, action: #selector(reserve), for: .touchUpInside)
+    cpfField?.text = PersonalDocumentManager().get()
   }
 
   @objc func openMap() {
