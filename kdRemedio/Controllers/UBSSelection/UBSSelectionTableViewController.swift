@@ -4,6 +4,11 @@ class UBSSelectionTableViewController: UITableViewController {
 
   var ubs: UBS?
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    ubs?.medicines.sort(by: { $0.available < $1.available })
+  }
+
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     guard let rows = ubs?.medicines.count else { return 0 }
     return rows

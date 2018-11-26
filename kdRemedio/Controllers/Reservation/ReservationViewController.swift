@@ -44,30 +44,3 @@ class ReservationViewController: UITableViewController {
     tableView.deselectRow(at: indexPath, animated: true)
   }
 }
-
-extension ReservationViewController: ReservationPresentable {
-
-  func showCPFInvalidAlert() {
-    let alert = UIAlertController(title: "Alerta", message: "CPF inválido", preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-    present(alert, animated: true, completion: nil)
-  }
-
-  func showRequestError(error: Error) {
-    let alert = UIAlertController(title: "Alerta", message: "Ocorreu um erro \(error.localizedDescription)", preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "Tentar novamente", style: .default, handler: { _ in
-      self.reserve()
-    }))
-    present(alert, animated: true, completion: nil)
-  }
-
-  func setScreen() {
-    titleLabel?.text = ubsMedicine?.name
-    addressLabel?.text = ubsMedicine?.address
-    distanceLabel?.text = String(describing: ubsMedicine?.distance ?? "") + " km"
-    quantityAvailable?.text = "Total de unidades disponíveis: " + String(describing: ubsMedicine?.medicine?.available ?? 0)
-    quantityRequired?.text = String(Int(stepper?.value ?? 0))
-    stepper?.maximumValue = Double(ubsMedicine?.medicine?.available ?? 0)
-    reserveMessage?.text = "A quantidade reservada não impede que outro usuário pegue o remédio."
-  }
-}

@@ -7,7 +7,7 @@ class UBS: Decodable {
   let name: String
 	let address: String
 	let googleMaps: URL
-	let medicines: [Medicine]
+	var medicines: [Medicine]
   var distance: String = ""
 
   init(name: String, address: String, googleMaps: URL, coordinateModel: Coordinate, medicines: [Medicine], distance: String) {

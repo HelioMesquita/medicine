@@ -43,6 +43,9 @@
 		FDD99258218E6631004B7FF3 /* Historic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD99257218E6631004B7FF3 /* Historic.swift */; };
 		FDD9925A218E6B63004B7FF3 /* HistoricTableViewController+HistoricPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD99259218E6B63004B7FF3 /* HistoricTableViewController+HistoricPresentable.swift */; };
 		FDD9925C2190E091004B7FF3 /* PersonalDocumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD9925B2190E091004B7FF3 /* PersonalDocumentManager.swift */; };
+		FDEBD6E821ACB28100697297 /* APIReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEBD6E721ACB28100697297 /* APIReservation.swift */; };
+		FDEBD6EA21ACB57000697297 /* ReservationViewController+ReservationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEBD6E921ACB57000697297 /* ReservationViewController+ReservationPresentable.swift */; };
+		FDEBD6EC21ACB5CF00697297 /* HistoricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEBD6EB21ACB5CF00697297 /* HistoricCell.swift */; };
 		FDF6C88F21545F74004A5D64 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6C88E21545F74004A5D64 /* Notification.swift */; };
 		FDF6C89321546AC5004A5D64 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6C89221546AC5004A5D64 /* APIClient.swift */; };
 /* End PBXBuildFile section */
@@ -101,6 +104,9 @@
 		FDD99257218E6631004B7FF3 /* Historic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historic.swift; sourceTree = "<group>"; };
 		FDD99259218E6B63004B7FF3 /* HistoricTableViewController+HistoricPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoricTableViewController+HistoricPresentable.swift"; sourceTree = "<group>"; };
 		FDD9925B2190E091004B7FF3 /* PersonalDocumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDocumentManager.swift; sourceTree = "<group>"; };
+		FDEBD6E721ACB28100697297 /* APIReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIReservation.swift; sourceTree = "<group>"; };
+		FDEBD6E921ACB57000697297 /* ReservationViewController+ReservationPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReservationViewController+ReservationPresentable.swift"; sourceTree = "<group>"; };
+		FDEBD6EB21ACB5CF00697297 /* HistoricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricCell.swift; sourceTree = "<group>"; };
 		FDF6C88E21545F74004A5D64 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		FDF6C89221546AC5004A5D64 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		FE6B737F7A2DD56878F77E93 /* Pods-kdRemedioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kdRemedioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kdRemedioTests/Pods-kdRemedioTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				FDA7E8542159C18100BBA355 /* ReservationViewController.swift */,
+				FDEBD6E921ACB57000697297 /* ReservationViewController+ReservationPresentable.swift */,
 				FD1E5290218E454C009091D9 /* ReservationPresenter.swift */,
 			);
 			path = Reservation;
@@ -231,6 +238,7 @@
 				FDAB61B1214B3AA200A1C01A /* Link.swift */,
 				FDB51A42215318D50083A6EA /* UbsMedicine.swift */,
 				FDD99257218E6631004B7FF3 /* Historic.swift */,
+				FDEBD6E721ACB28100697297 /* APIReservation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 			children = (
 				FDAB61BA214B45B700A1C01A /* UBSSelectionCell.swift */,
 				FDB51A48215326C60083A6EA /* LoadingViewController.swift */,
+				FDEBD6EB21ACB5CF00697297 /* HistoricCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -522,15 +531,18 @@
 				FDAB61B4214B3AA200A1C01A /* Medicine.swift in Sources */,
 				FD274B7C215DB1210086D96E /* R.generated.swift in Sources */,
 				FD1E52A4218E6147009091D9 /* HomeMapViewPresenter.swift in Sources */,
+				FDEBD6EA21ACB57000697297 /* ReservationViewController+ReservationPresentable.swift in Sources */,
 				FDAB61AA214B3A4F00A1C01A /* json.swift in Sources */,
 				FDAB61BB214B45B700A1C01A /* UBSSelectionCell.swift in Sources */,
 				FD1E52A2218E6147009091D9 /* HomeMapViewController.swift in Sources */,
+				FDEBD6EC21ACB5CF00697297 /* HistoricCell.swift in Sources */,
 				FDD9925C2190E091004B7FF3 /* PersonalDocumentManager.swift in Sources */,
 				FD341DB52157DC9100FEA928 /* UBSAnnotation.swift in Sources */,
 				FDB51A43215318D50083A6EA /* UbsMedicine.swift in Sources */,
 				FD1E5291218E454C009091D9 /* ReservationPresenter.swift in Sources */,
 				FD1E52A5218E6147009091D9 /* HomeMapViewController+HomeMapViewPresentable.swift in Sources */,
 				FDAB61B2214B3AA200A1C01A /* UBS.swift in Sources */,
+				FDEBD6E821ACB28100697297 /* APIReservation.swift in Sources */,
 				FDAB61BD214EB94800A1C01A /* UBSMedicineSelectionTableViewController.swift in Sources */,
 				FDAB61B3214B3AA200A1C01A /* Coordinate.swift in Sources */,
 				FD341DB32157D37600FEA928 /* UBSSelectionTableViewController.swift in Sources */,

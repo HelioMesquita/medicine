@@ -19,8 +19,8 @@ class HistoricTableViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-    cell.textLabel?.text = historic[indexPath.row].formartDate()
-    return cell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "HistoricCell", for: indexPath) as? HistoricCell
+    cell?.fill(historic: historic[indexPath.row])
+    return cell ?? UITableViewCell()
   }
 }
