@@ -328,7 +328,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vYP-ua-vEy">
-                                                    <rect key="frame" x="16" y="16" width="343" height="81"/>
+                                                    <rect key="frame" x="16" y="16" width="343" height="105.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UBS Cavadas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3Y-6d-p5l">
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="26.5"/>
@@ -344,7 +344,13 @@
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxG-ld-VAN">
                                                             <rect key="frame" x="0.0" y="59.5" width="343" height="21.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remedio: Dipirona" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-1v-rFu">
+                                                            <rect key="frame" x="0.0" y="86" width="343" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -443,6 +449,7 @@
                         <outlet property="addressLabel" destination="k3i-rY-OPP" id="cZl-aE-MSa"/>
                         <outlet property="cpfField" destination="ndh-Mc-Kar" id="idX-On-Ca5"/>
                         <outlet property="distanceLabel" destination="KxG-ld-VAN" id="F9K-EE-rWb"/>
+                        <outlet property="medicineName" destination="8Ui-1v-rFu" id="XxA-r2-75I"/>
                         <outlet property="openMapButton" destination="zTJ-aX-ty3" id="0ml-Rg-4mS"/>
                         <outlet property="quantityAvailable" destination="NSm-Gb-LV2" id="nnM-M1-bif"/>
                         <outlet property="quantityRequired" destination="uGJ-G4-D4m" id="vEz-RC-q6v"/>

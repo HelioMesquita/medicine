@@ -31,10 +31,11 @@ class HomeMapViewPresenter {
   func viewDidLoad() {
     view?.configureSearchBar()
     view?.configureMapView()
+    NotificationCenter.default.addObserver(self, selector: #selector(load), name: .reloadApp, object: nil)
     load()
   }
 
-  func load() {
+  @objc func load() {
     firstly {
       showLoading()
     }.then {

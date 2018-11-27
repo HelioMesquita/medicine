@@ -31,7 +31,7 @@ class UBSSelectionTableViewController: UITableViewController {
     guard let viewController = R.storyboard.main.reservation(), let ubs = ubs else { return }
     let medicine = ubs.medicines[indexPath.row]
     viewController.ubsMedicine = UbsMedicine(medicine: medicine, ubs: ubs)
-    viewController.navigationItem.title = "Selecione a quantidade desejada"
+    viewController.navigationItem.title = "Selecione"
     navigationController?.pushViewController(viewController, animated: true)
   }
 }

@@ -10,4 +10,5 @@ import Foundation
 
 struct APIReservation: Decodable {
   let success: Bool
+  let data: String
 }

@@ -9,6 +9,7 @@ class ReservationViewController: UITableViewController {
   @IBOutlet weak var addressLabel: UILabel?
   @IBOutlet weak var distanceLabel: UILabel?
   @IBOutlet weak var quantityRequired: UILabel?
+  @IBOutlet weak var medicineName: UILabel?
   @IBOutlet weak var stepper: UIStepper?
   @IBOutlet weak var quantityAvailable: UILabel?
   @IBOutlet weak var reserveMessage: UILabel?
@@ -36,8 +37,8 @@ class ReservationViewController: UITableViewController {
   @objc func reserve() {
     let link =  ubsMedicine?.medicine?.links.safe
     let cpf = cpfField?.text
-    let quantity = String(Int(stepper?.stepValue ?? 0))
-    presenter.handleReservation(cpf: cpf, quantity: quantity, link: link)
+    let quantity = quantityRequired?.text
+    presenter.handleReservation(cpf: cpf, quantity: quantity ?? "1", link: link)
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

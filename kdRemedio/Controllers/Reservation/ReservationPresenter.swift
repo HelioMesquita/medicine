@@ -7,7 +7,7 @@ protocol ReservationPresentable: class {
   func showAlertInvalidCPF()
   func showAlertGenericError()
   func showAlertSuccessReservation()
-  func showAlerFailReservation()
+  func showAlerFailReservation(data: String)
 }
 
 class ReservationPresenter {
@@ -44,20 +44,20 @@ class ReservationPresenter {
   private func load(url: URL, method: HTTPMethod) {
     firstly {
       showLoading()
-      }.then {
-        self.makeRequest(url: url, method: method)
-      }.done { reservation in
-        if reservation.success {
-          self.view?.showAlertSuccessReservation()
-        } else {
-          self.view?.showAlerFailReservation()
-        }
-      }.catch { error in
-        self.view?.showAlertRequestError(error: error)
-      }.finally {
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
-          NotificationCenter.default.post(name: .removeLoadingViewController, object: nil, userInfo: nil)
-        }
+    }.then {
+      self.makeRequest(url: url, method: method)
+    }.done { reservation in
+      if reservation.success {
+        self.view?.showAlertSuccessReservation()
+      } else {
+        self.view?.showAlerFailReservation(data: reservation.data)
+      }
+    }.catch { error in
+      self.view?.showAlertRequestError(error: error)
+    }.finally {
+      DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
+        NotificationCenter.default.post(name: .removeLoadingViewController, object: nil, userInfo: nil)
+      }
     }
   }
 

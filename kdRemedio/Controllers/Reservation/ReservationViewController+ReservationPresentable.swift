@@ -1,11 +1,3 @@
-//
-//  ReservationViewController+ReservationPresentable.swift
-//  kdRemedio
-//
-//  Created by Hélio Mesquita on 26/11/18.
-//  Copyright © 2018 callidus. All rights reserved.
-//
-
 import UIKit
 
 extension ReservationViewController: ReservationPresentable {
@@ -20,12 +12,13 @@ extension ReservationViewController: ReservationPresentable {
     let alert = UIAlertController(title: nil, message: "Sua reserva foi realiza com sucesso", preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in
       self.navigationController?.popToRootViewController(animated: true)
+      NotificationCenter.default.post(name: .reloadApp, object: nil, userInfo: nil)
     })
     present(alert, animated: true)
   }
 
-  func showAlerFailReservation() {
-    let alert = UIAlertController(title: nil, message: "Ocorreu alguma falha ao realizar a reserva, tente novamente", preferredStyle: .alert)
+  func showAlerFailReservation(data: String) {
+    let alert = UIAlertController(title: nil, message: data, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "Ok", style: .default))
     present(alert, animated: true)
   }
@@ -52,5 +45,8 @@ extension ReservationViewController: ReservationPresentable {
     quantityRequired?.text = String(Int(stepper?.value ?? 0))
     stepper?.maximumValue = Double(ubsMedicine?.medicine?.available ?? 0)
     reserveMessage?.text = "A quantidade reservada não impede que outro usuário pegue o remédio."
+    if let name = ubsMedicine?.medicine?.name {
+      medicineName?.text = "Remédio: " + name
+    }
   }
 }
